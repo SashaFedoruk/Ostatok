@@ -1,0 +1,1147 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*.select2-arrow{*/
+    /*display: inline-block;*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*margin-left: 2px;*/
+    /*vertical-align: middle;*/
+    /*border-top: 4px dashed;*/
+    /*border-top: 4px solid \9;*/
+    /*border-right: 4px solid transparent;*/
+    /*border-left: 4px solid transparent;*/
+/*}*/
+.search-form {
+    position: relative;
+}
+.size.bold > .row > span {
+    margin-bottom: 10px;
+}
+.nav .dropdown-menu{
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.admin-pages .head-block + p{
+    min-height: 72px;
+}
+.my2-btn-full-size {
+    width: 100%;
+    margin-top: 10px;
+}
+.my2-btn-full-size-w-m {
+    width: 100%;
+}
+.rezult-search{
+    position: absolute;
+    left: 0;
+    top: 43px;
+    width: 400px;
+    min-height: 100px;
+    border: 1px solid #dcdcdc;
+    margin-left: 15px;
+    background: #fff;
+    display: none;
+    z-index: 10;
+    box-sizing: border-box;
+    border-top: none;
+    padding-bottom: 10px;
+}
+#productsearch2 .rezult-search{
+    left: 0;
+    top: 34px;
+    width: 81.3%;
+    margin-left: 0; 
+}
+.right-text-align{
+    text-align: right;
+}
+.rezult-item{
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.rezult-search img{
+    width: 100%;
+}
+
+.catalog-main-block .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+.catalog-item {
+    width: 23%;
+    margin: 0 1%;
+}
+
+.contact-form .form-group {
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100% !important;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="submit"] {
+    width: 100%;
+}
+
+.contact-form form,
+.contact-form h4 {
+    margin-top: 0;
+}
+
+.contact-form .navbar-form > * {
+    display: block !important;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+    overflow-y: auto;
+}
+
+button[type="submit"] img {
+    height: 18px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    color: #000;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+.catalog-container > div > div h3 {
+    height: 70px;
+    font-size: 1.1em;
+}
+
+.site-error {
+    min-height: 300px;
+}
+
+.help-block-error {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+a[data-confirm] {
+    margin-right: 5px;
+}
+
+a[data-confirm] img {
+    height: 12px;
+}
+
+a {
+    color: #000;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: #f2f2f2;
+}
+
+li.main-menu a:hover,
+li.main-menu a:focus,
+li.main-menu a:active {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+li.lang a:hover,
+li.lang a:focus,
+li.lang a:active {
+    background-color: #fff;
+    color: #ff5722;
+}
+
+a.logo:hover,
+a.logo:focus,
+a.logo:active {
+    color: #000;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: 300;
+}
+
+.cblock {
+    color: #fff;
+    margin-top: 200px;
+}
+
+.cblock h1,
+.cblock h2 {
+    text-shadow: 0 0 10px #000;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+span.green {
+    color: #1e905d;
+    font-weight: 800;
+}
+
+.block {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.right {
+    float: right;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.my-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff5722;
+    color: #fff;
+    height: 34px;
+    text-decoration: none;
+}
+
+.my-btn:hover {
+    color: #fff;
+}
+
+.my2-btn:focus,
+.my2-btn:hover,
+.my2-btn:active {
+    background-color: #ff5722 !important;
+    color: #fff !important;
+}
+
+.my2-btn {
+    border: 1px solid #ff5722;
+    border-radius: 3px;
+    color: #ff5722;
+    outline: none;
+    background-color: #fff;
+}
+
+.top-space {
+    margin-top: 20px;
+}
+
+.bottom-space {
+    margin-bottom: 50px;
+}
+
+.down-space {
+    margin-bottom: 30px;
+}
+
+.vcenter {
+    height: 150px;
+}
+
+.vcenter > * {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Стили Навигации ---> */
+
+.navbar {
+    margin-bottom: 0px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.navbar-toggle {
+    border: 1px solid #999999;
+}
+
+.navbar-toggle span {
+    background-color: #333;
+}
+
+.navbar-brand {
+    line-height: 12px;
+    margin-right: 15px;
+}
+.navbar-brand .logo-big,
+a.logo .logo-big{
+ font-size: 1.4em !important;
+}
+.navbar-brand span {
+    font-size: 0.7em;
+}
+
+button.menu {
+    width: 170px;
+}
+
+.dropdown {
+    margin-right: 15px;
+}
+
+/* <--- Конец Стилей Навигации */
+
+/* ---> Главный блок с картинкой */
+
+.main {
+    border-bottom: 1px solid #dcdcdc;
+    background: url(../img/main.jpg) no-repeat center bottom;
+    background-attachment: absolute;
+    background-position: center center;
+    min-height: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+/* <--- Конец Главного блока с картинкой */
+
+/* ---> Каталог */
+
+ul.catalog {
+    list-style: none;
+    line-height: 30px;
+}
+
+/* <--- Конец Каталога */
+
+/* ---> Покупатели */
+
+.seller {
+    background-color: #f6f5f3;
+}
+
+.buyer {
+    background-color: #faf9f7;
+}
+
+.seller i,
+.buyer i {
+    color: #999;
+    padding-top: 45px;
+}
+
+.fa-rotate-90 {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+/* <--- Конец Покупателей */
+
+/* ---> Футер */
+
+.footer,
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+.footer {
+    background-color: #10784a;
+}
+
+.footer ul li a,
+.footer-bottom a {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #1a905b;
+}
+
+.footer a.logo {
+    line-height: 16px;
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer a.logo:hover,
+.footer a.logo:focus,
+.footer a.logo:active {
+    color: none;
+    text-decoration: none;
+    outline: none;
+}
+
+.footer a.logo span {
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
+.footer-bottom p.copy span {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer ul li a {
+    color: #72c39f;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom p.copy {
+    font-size: 0.8em;
+}
+
+.contacts .item {
+    display: flex;
+}
+
+.contacts .item img {
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+}
+
+/* <--- Конец Футера */
+
+/* ---> Блок Логин/Регистрация */
+
+.login-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.admin-login-form {
+    justify-content: center;
+    min-height: 79vh;
+}
+
+.admin-login-form h2 {
+    margin-bottom: 20px;
+}
+
+.singin,
+.login {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.singin {
+    background-color: #e3e3e3;
+}
+
+.singin,
+.login {
+    width: 50%;
+}
+
+.singin form,
+.singin form a,
+.login form,
+.login form a {
+    display: flex;
+    flex-direction: column;
+}
+
+.singin form input,
+.singin form select,
+.login form input,
+.login button,
+.singin form a,
+.login form a,
+.singin form .checkbox,
+.singin button,
+.admin-login-form .form-group .help-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.form-group .help-block {
+    font-size: 0.8em;
+}
+
+.singin form .checkbox {
+    width: 60%;
+}
+
+/* <--- Конец Блока Логин/Регистрация */
+
+/* ---> Каталог */
+
+.wrap {
+    background-color: #f2f2f2;
+    margin-top: 30px;
+}
+
+.dropdown ul {
+    margin-bottom: 0;
+}
+
+.price {
+    font-size: 1.6em;
+    color: #1e905d;
+}
+
+.list-inline {
+    padding-bottom: 50px;
+}
+
+li a.page {
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+li a.page:hover,
+li a.page:focus,
+li.active a.page{
+    border: 1px solid #ff5722;
+    background-color: #ff5722;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+
+li.without-border a {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+li.without-border a:hover,
+li.without-border a:focus {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+/* <--- Конец Каталога */
+
+/* ---> Продукт */
+
+.under-line {
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.stats {
+    line-height: 35px;
+}
+
+.offer {
+    border-top: 1px solid #cdcdcd;
+    padding: 10px 0;
+}
+
+.offer ul li {
+    word-break: break-all;
+    font-weight: normal;
+}
+
+.sell-block img {
+    width: 120px;
+}
+
+.price-block .price,
+.size-block .size {
+    font-size: 1.6em;
+    color: #000;
+}
+
+.price-block .tag,
+.size-block .tag {
+    color: #1e905d;
+}
+
+.btn-marg {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.vline {
+    height: 80px;
+    width: 1px;
+    background-color: #dcdcdc;
+    margin-left: 50%;
+}
+
+/* <--- Конец Продукт */
+
+/* ---> Админ - главная страница */
+
+.main-title {
+    width: 100%;
+    background-color: #ff5722;
+}
+
+.admin-pages ul ul {
+    padding-left: 20px;
+}
+
+.main-title p {
+    color: #fff;
+    padding-top: 10px;
+}
+
+.admin-menu {
+    min-height: 62vh;
+}
+
+.admin-menu a,
+.admin-menu li {
+    color: #1e905d;
+}
+
+.admin-menu a:hover,
+.admin-menu a:focus,
+.admin-menu a:active {
+    color: #000;
+}
+
+.admin-menu li {
+    line-height: 34px;
+}
+
+.filter-bar {
+    background: #f2f2f2;
+    padding: 15px;
+}
+
+.filter-bar .btn {
+    width: 100%;
+}
+
+.catalog-container img,
+.product img {
+    width: 100%;
+}
+.product img {
+    width: 80%;
+}
+
+.catalog-container > div > div {
+    margin-top: 15px;
+}
+
+.catalog-container .list-inline {
+    margin-top: 15px;
+}
+
+ul.second-admin-menu {
+    /* margin-left: 40px; */
+}
+
+/* <--- Конец Админ - главная страница */
+
+/* Main-catalog ---> */
+
+ul.main-catalog {
+    text-align: left;
+    list-style: disc;
+    padding-left: 30px;
+    min-height: 170px;
+}
+
+.catalog-cont {
+    margin-bottom: 30px;
+}
+
+/* <--- Конец Main-catalog */
+
+/* Админ Создание обьявлений ---> */
+
+.wrap-input {
+    display: flex;
+}
+
+.label-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 3px 3px 0;
+    color: #fff;
+    height: 34px;
+    width: 15%;
+    padding: 5px 10px;
+    background-color: #ff5722;
+    margin-left: -3px;
+}
+
+.finish-price {
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+input.static {
+    background-color: #f2f2f2;
+}
+
+/* <--- Конец Админ Создание обьявлений */
+
+/* Админ Настройки ---> */
+
+.category {
+    width: 30%;
+}
+
+.horiz-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.horiz-line {
+    width: 10%;
+    text-align: center;
+}
+
+.catagory-space {
+    margin-top: 40px;
+}
+
+.btn-catagory-space {
+    margin-top: 170px;
+}
+
+/* <--- Конец Админ Настройки */
+
+/* Админ Добавление обьявления ---> */
+
+.block-advert .date-block {
+    display: flex;
+    height: 34px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px 3px 0 0;
+    border-bottom: none;
+}
+
+.block-advert .head-block img {
+    width: 100%;
+}
+
+.block-advert .date-block .to,
+.block-advert .date-block .date,
+.block-advert .size,
+.block-advert .nav-btn,
+.block-advert .nav-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-advert .date-block .to {
+    width: 30%;
+    background-color: #ff5722;
+    border-radius: 3px 0 0 0;
+    color: #fff;
+}
+
+.block-advert .date-block .date {
+    width: 70%;
+    border-radius: 0 3px 0 0;
+}
+
+.block-advert .size {
+    color: #fff;
+    height: 34px;
+    background-color: #333333;
+}
+
+.block-advert .prices {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.block-advert .nav-btn {
+    border: 1px solid #000;
+    height: 34px;
+}
+
+.block-advert .nav-btn a {
+    width: 100%;
+    height: 32px;
+}
+
+.block-advert .nav-btn a img {
+    height: 21px;
+}
+
+.block-advert .nav-btn a:hover {
+    background-color: #ff5722;
+}
+
+.block-advert .nav-btn a:nth-child(2) {
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+/* <--- Конец Админ Добавление обьявления */
+
+/* ---> Админ - Продукты */
+
+.table-wrap {
+    overflow: scroll;
+}
+
+.table tr th select {
+    border: none;
+    background-color: #fff;
+}
+
+.table tr td.action .nabtn {
+    display: flex;
+    justify-content: space-around;
+    width: 140px;
+}
+
+td.action .nabtn a {
+    width: 100%;
+}
+
+td.action .nabtn a:nth-child(2) {
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+/* <--- Конец Админ - Продукты */
+
+/* ---> Админ - Добавление нового продукта */
+
+.input-with-button .form-group > label,
+.input-with-button .form-group > input,
+.input-with-button .form-group > select {
+    display: inline-block;
+    width: 85%;
+}
+
+.input-with-button .form-group > a {
+    width: 10%;
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.input-with-button .form-group > a img {
+    height: 28px;
+}
+
+.image-view {
+    width: 100%;
+    height: 350px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.hidden-block {
+    display: none;
+}
+
+.image-view img {
+    width: 100%;
+}
+
+.image-view .default-img-button-block {
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.image-view .default-img-button-block,
+.image-view .default-img-button-block button {
+    display: inline-block;
+}
+
+.image-view .default-img-button-block button > img {
+    display: inline-block;
+    width: auto;
+    height: 25px;
+}
+
+.image-view .selected,
+.image-view .selected > button {
+    background: #e5e5e5;
+}
+
+.prod-info > ul > li > ul {
+    display: block;
+}
+
+.image-view > div > div {
+    margin-bottom: 15px;
+}
+
+/* ---> Конец Админ - Добавление нового продукта */
+
+/* Медиа ---> */
+
+@media screen and (max-width: 1200px) {
+    .vcenter {
+        height: 170px;
+    }
+    ul.main-catalog {
+        padding-left: 60px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-form,.navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .form-group {
+        width: 80%;
+    }
+
+    .navbar .form-group input {
+        width: 100%;
+    }
+
+    .navbar .form-group + button {
+        margin-bottom: 5px;
+    }
+    .navbar-nav .dropdown{
+        margin-right: 0;
+    }
+
+    .admin-menu {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .filter-bar .form-control {
+        margin-bottom: 15px;
+    }
+
+    .filter-bar .btn {
+        margin-bottom: 15px;
+    }
+
+    .navbar-collapse .language,
+    li.main-menu {
+        text-align: center;
+    }
+
+    ul.second-admin-menu {
+        margin-left: 0;
+    }
+
+    .seller-price-block {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .vcenter {
+        height: auto;
+    }
+
+    .vcenter > * {
+        position: relative;
+        top: auto;
+        transform: none;
+    }
+
+    .advar .navbar-left {
+        text-align: center;
+    }
+
+    .advar .my2-btn {
+        width: 40%;
+        margin-left: 15px;
+    }
+    ul.main-catalog {
+        text-align: center;
+        list-style: none;
+        padding-left: 0px;
+        line-height: 30px;
+    }
+    .catalog-item {
+        width: 31%;
+    }
+	.rezult-search{
+    position: absolute;
+    left: 10%;
+    top: 69px;
+    width: 80%;
+    margin-left: -15px;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-form > * {
+        display: inline-block;
+    }
+
+    .navbar .form-group {
+        width: 70%;
+    }
+
+    .navbar .form-group + button {
+        margin-bottom: 1px;
+    }
+
+    .seller img.icon,
+    .buyer img.icon {
+        height: 80px;
+    }
+
+    .seller h4,
+    .buyer h4 {
+        font-size: 1em;
+    }
+
+    .seller i,
+    .buyer i {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .login-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .singin,
+    .login {
+        width: 100%;
+    }
+
+    .singin form input,
+    .singin form select,
+    .login form input,
+    .login button,
+    .login form a,
+    .singin button {
+        width: 90%;
+    }
+
+    .singin form .checkbox {
+        width: 80%;
+    }
+
+    .user-info {
+        margin-bottom: 50px;
+    }
+
+    .contact-footer {
+        margin-bottom: 50px;
+    }
+
+    .btn-catagory-space {
+        margin-top: 30px;
+    }
+
+    .offer .text-right {
+        text-align: center;
+    }
+
+    .fa-rotate-90 {
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .how-work .text-left {
+        text-align: center;
+    }
+
+    .advar .navbar-left {
+        text-align: center;
+    }
+
+    .advar .my2-btn {
+        width: 90%;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 2.0em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .size-block .size {
+        line-height: 32px;
+    }
+    .contact-seller .text-right {
+        text-align: right;
+    }
+    ul.main-catalog {
+        text-align: center;
+        list-style: none;
+        padding-left: 0px;
+        line-height: 30px;
+    }
+    .catalog-item {
+        width: 50%;
+        margin: 0;
+    }
+}
+
+/* <--- Конец Медиа */

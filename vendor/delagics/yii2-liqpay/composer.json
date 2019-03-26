@@ -1,0 +1,30 @@
+{
+    "name":"delagics/yii2-liqpay",
+    "type": "yii2-extension",
+    "description": "SDK for Liqpay",
+    "keywords": ["yii2", "liqpay","pay"],
+    "homepage": "https://github.com/liqpay/sdk-php",
+    "license": "OSL 3.0",
+    "authors": [
+        {
+            "name": "Liqpay",
+            "email": "support@liqpay.com",
+            "homepage": "https://www.liqpay.com/",
+            "role": "Developer"
+        }
+    ],
+    "require":{
+        "php":">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "delagics\\liqpay\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
