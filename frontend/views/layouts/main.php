@@ -17,14 +17,44 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
+
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137253090-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-137253090-1');
+    </script>
+    
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Материалы для изготовления мебели по всей Украине | Ostatok | Остаток"/>
+    <meta property="og:description" content="Раскроенные плиточные материалы - продать или купить по лучшим ценам можно здесь - Ostatok | Остаток | Лучший выбор материалов для мебели и их производства. Большой выбор. №1 в Украине. Жмите!"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://ostatok.online/"/>
+    <meta property="og:site_name" content="Ostatok"/>
+    <meta property="og:street_address" content="Dragomanova, 2a"/>
+    <meta property="og:locality" content="Kiev"/>
+    <meta property="og:postal-code" content="02068"/>
+    <meta property="og:country-name" content="Ukraine"/>
+    <meta property="og:email" content="smebel2005@gmail.com"/>
+    <meta property="og:phone_number" content="+380679958788"/>
+    
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    
+    <meta name="title" content="Материалы для изготовления мебели по всей Украине | Ostatok | Остаток"/>
+    <meta name="description" content="Раскроенные плиточные материалы - продать или купить по лучшим ценам можно здесь - Ostatok | Остаток | Лучший выбор материалов для мебели и их производства. Большой выбор. №1 в Украине. Жмите!"/>
+    <meta name="theme-color" content="#ff5722" />
+    <meta name="google-site-verification" content="FWgRi8IkUZB2RLCtJW4IzFfDBC0cCJ9oTSN_qtQlskc" />
+
 </head>
+
 <body>
 <?php $this->beginBody() ?>
 

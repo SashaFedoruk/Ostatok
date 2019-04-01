@@ -14,47 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form-user-update.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/_form-user-update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="93" selection-start-line="21" selection-start-column="93" selection-end-line="21" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="234" column="40" selection-start-line="234" selection-start-column="40" selection-end-line="234" selection-end-column="40" />
+            <state relative-caret-position="502">
+              <caret line="1182" column="29" lean-forward="true" selection-start-line="1182" selection-start-column="29" selection-end-line="1182" selection-end-column="29" />
+              <folding>
+                <marker date="1554145846693" expanded="true" signature="45936:48545" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-panel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin-panel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/layouts/admin-panel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create-ads.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/site/create-ads.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-816">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="properties.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/site/properties.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="51" column="10" selection-start-line="29" selection-start-column="3" selection-end-line="51" selection-end-column="10" />
+            <state relative-caret-position="306">
+              <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -62,17 +38,26 @@
       <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="52" />
+            <state relative-caret-position="1700">
+              <caret line="152" column="42" lean-forward="true" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#115#143#0#PHP" expanded="true" />
+                <element signature="e#109#141#0#PHP" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ads.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/Ads.php">
+      <file leaf-file-name="catalog.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/site/catalog.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -80,8 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index</find>
-      <find>cata</find>
       <find>page</find>
       <find>prod</find>
       <find>split</find>
@@ -92,7 +75,6 @@
       <find>Categories</find>
       <find>product</find>
       <find>products</find>
-      <find />
       <find>products(</find>
       <find>update</find>
       <find>top</find>
@@ -110,10 +92,16 @@
       <find>createAd</find>
       <find>createAds</find>
       <find>login</find>
+      <find>q</find>
+      <find>index</find>
+      <find>Столешница Kronospan К205(3079) RS (F081) Бетон Чёрный 38мм</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -148,7 +136,6 @@
         <option value="$PROJECT_DIR$/backend/views/site/view-product.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/view-product.php" />
         <option value="$PROJECT_DIR$/frontend/web/css/main.css" />
-        <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/backend/views/site/_form-create-decoration.php" />
         <option value="$PROJECT_DIR$/backend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/backend/views/site/create-decoration.php" />
@@ -166,9 +153,10 @@
         <option value="$PROJECT_DIR$/backend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/create-ads.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/_partial-active-ads.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/admin-panel.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
+        <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
       </list>
     </option>
   </component>
@@ -180,6 +168,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/backend/web/assets/21ec1962/package.json" />
       <path value="$PROJECT_DIR$/backend/web/assets/a441e91e/package.json" />
       <path value="$PROJECT_DIR$/backend/web/assets/ae2dbc28/package.json" />
     </packageJsonPaths>
@@ -271,124 +260,49 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-              <item name="searchwidget" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dashboard.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dashboard.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-              <item name="searchwidget" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,21 +368,22 @@
       <workItem from="1549304231634" duration="729000" />
       <workItem from="1549458809080" duration="1330000" />
       <workItem from="1549890008502" duration="12370000" />
+      <workItem from="1553634882452" duration="344000" />
+      <workItem from="1554140297681" duration="5541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200926000" />
+    <option name="totallyTimeSpent" value="206811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Migrations" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21" />
@@ -494,13 +409,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/config/main.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -614,9 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="60" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,13 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="785" column="1" selection-start-line="785" selection-start-column="1" selection-end-line="785" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="141" selection-start-line="34" selection-start-column="141" selection-end-line="34" selection-end-column="141" />
         </state>
       </provider>
     </entry>
@@ -750,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/site/properties.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="850">
           <caret line="51" column="10" selection-start-line="29" selection-start-column="3" selection-end-line="51" selection-end-column="10" />
         </state>
       </provider>
@@ -762,17 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/_form-user-update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="93" selection-start-line="21" selection-start-column="93" selection-end-line="21" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/site/create-ads.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        <state relative-caret-position="391">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -780,11 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="140" column="9" selection-start-line="134" selection-start-column="7" selection-end-line="140" selection-end-column="9" />
-          <folding>
-            <element signature="e#7#30#0#PHP" expanded="true" />
-            <element signature="e#63#1185#0" />
-            <element signature="e#1214#2309#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,27 +692,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/_form-user-update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="234" column="40" selection-start-line="234" selection-start-column="40" selection-end-line="234" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="52" />
-          <folding>
-            <element signature="e#115#143#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="21" column="93" selection-start-line="21" selection-start-column="93" selection-end-line="21" selection-end-column="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/layouts/admin-panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        <state relative-caret-position="306">
+          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="152" column="42" lean-forward="true" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/catalog.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#109#141#0#PHP" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="1182" column="29" lean-forward="true" selection-start-line="1182" selection-start-column="29" selection-end-line="1182" selection-end-column="29" />
+          <folding>
+            <marker date="1554145846693" expanded="true" signature="45936:48545" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1178,19 +1178,14 @@ class SiteController extends Controller
 
 //    public function actionAddDb()
 //    {
-//        $arr = '{"img":"/store/Items/photos/ph48307.jpg","СкладскаяПрограмма":"Складская","Класс эмиссии":"E1","name":"ДСП CLEAF Ares/Ares FB44 Стромболи","Производитель":"CLEAF (Италия)","Толщина, мм":"18","Декор":"U, W (Уни)","Структура поверхности":"Ares/Ares","Тип ДСП":"ламинированное","Односторонняя деталь":"Нет","decoration":"Другое"}
-//{"img":"/store/Items/photos/ph48309.jpg","СкладскаяПрограмма":"Складская","Класс эмиссии":"E1","name":"ДСП CLEAF Ares/Ares FB61 Капитолий","Производитель":"CLEAF (Италия)","Толщина, мм":"18","Декор":"U, W (Уни)","Структура поверхности":"Ares/Ares","Тип ДСП":"ламинированное","Односторонняя деталь":"Нет","decoration":"Другое"}
-//{"img":"/store/Items/photos/ph48311.jpg","СкладскаяПрограмма":"Складская","Класс эмиссии":"E1","name":"ДСП CLEAF Concreta/Maloja FC04 Индастриал","Производитель":"CLEAF (Италия)","Толщина, мм":"18","Декор":"F (Фантазийные)","Структура поверхности":"Concreta/Maloja","Тип ДСП":"ламинированное","Односторонняя деталь":"Да","decoration":"Другое"}
-//{"img":"/store/Items/photos/ph48312.jpg","СкладскаяПрограмма":"Складская","Класс эмиссии":"E1","name":"ДСП CLEAF Engadina/Maloja S063 Дуб","Производитель":"CLEAF (Италия)","Толщина, мм":"18.5","Декор":"H (Древоподобные)","Структура поверхности":"Engadina/Maloja","Тип ДСП":"ламинированное","Односторонняя деталь":"Да","decoration":"S063"}
-//{"img":"/store/Items/photos/ph48314.jpg","СкладскаяПрограмма":"Складская","Класс эмиссии":"E1","name":"ДСП CLEAF Millenium/Millenium S086 Холмс NEW 2018","Производитель":"CLEAF (Италия)","Толщина, мм":"18.5","Декор":"H (Древоподобные)","Структура поверхности":"Millenium/Millenium","Тип ДСП":"ламинированное","Односторонняя деталь":"Нет","decoration":"S086"}
-//';
+//        $arr = '';
 //        $data = explode("\n", $arr);
 //        $this->layout = "";
 //        $i = 0;
 ////        foreach ($data as $el) {
 ////            if ($el != "") {
 ////                $cur = json_decode(trim($el), true);
-////                $tmp = Product::findOne(['name' => $cur['name']." ".$cur['Толщина, мм'].'мм']);
+////                $tmp = Product::findOne(['name' => $cur['name']]);
 ////                if($tmp == null){
 ////
 ////
@@ -1211,11 +1206,10 @@ class SiteController extends Controller
 ////                                $newPropValue->name = $value;
 ////                                $newPropValue->parent_id = $prop->getPrimaryKey();
 ////                                $newPropValue->isAnyField = 0;
-////
 ////                                $newPropValue->save();
 ////                                $i++;
 ////
-////                                return $newPropValue->name.' || '.$newPropValue->parent_id.' || '.($newPropValue->validate() == true ? '1':'2');
+////                                //return $newPropValue->name.' || '.$newPropValue->parent_id.' || '.($newPropValue->validate() == true ? '1':'2');
 ////                            }
 ////                        } else {
 ////                            $producent = Producent::findOne(['name' => $value]);
@@ -1225,7 +1219,7 @@ class SiteController extends Controller
 ////                                $producent->code = "0";
 ////                                $i++;
 ////                                $producent->save();
-////                                return $key . ' none1';
+////                                //return $key . ' none1';
 ////                            }
 ////                        }
 ////                    }
@@ -1234,26 +1228,29 @@ class SiteController extends Controller
 ////            }
 ////        }
 //        $rez = "";
-//        $catId = 15;
+//        $i = 0;
+//        $catId = 20;
 //
-//        foreach ($data as $el) {
-//            if ($el != "") {
-//                $cur = json_decode($el, true);
-//                $prod = Product::findOne(['name' => $cur['name']." ".$cur['Толщина, мм'].'мм']);
+////        foreach ($data as $el) {
+////            if ($el != "") {
+////                $cur = json_decode($el, true);
+////                $prod = Product::findOne(['name' => $cur['name']]);
 //////                if(isset($cur['img']) && $prod->imgUrl == ""){
 //////                    $i++;
 //////                    $prod->imgUrl = "https://viyar.ua".$cur['img'];
 //////                    $prod->save();
 //////                }
-//                //$prod = Product::findOne(['name' => $cur['name']]);
+////                $prod = Product::findOne(['name' => $cur['name']]);
 ////                if ($prod != null) {
+////                    $i++;
+////                    $rez .= $prod->name."<br>";
 ////                    continue;
 ////                }
 ////
 ////                $prod = new Product();
 ////                //$prod->name = $cur['name'];
-////                $prod->name = $cur['name']." ".$cur['Толщина, мм'].'мм';
-////                $rez .= $prod->name."<br>";
+////                $prod->name = $cur['name'];
+////
 ////                $decoration = Decoration::findOne(['code' => $cur['decoration']]);
 ////                if ($decoration == null) {
 ////                    $decoration = Decoration::findOne(['name' => 'Другое']);
@@ -1263,6 +1260,7 @@ class SiteController extends Controller
 ////                $prod->category_id = $catId;
 ////                $prod->producent_id = Producent::findOne(['name' => $cur['Производитель']])->id;
 ////                $prod->save();
+////                //$i++;
 ////
 ////
 ////                foreach ($cur as $key => $value) {
@@ -1282,13 +1280,14 @@ class SiteController extends Controller
 ////                        $prodProp->product_id = $prod->getPrimaryKey();
 ////                        $prodProp->prop_id = $prop->id;
 ////                        $prodProp->save();
+////
 ////                    }
 ////
 ////                }
-//
-//            }
-//        }
-//        return $i.$rez;
+////
+////            }
+////        }
+//        return $i." ".$rez;
 //        //return $cur['name'];
 //
 //    }

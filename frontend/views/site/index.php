@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $model common\models\Category [] */
 
-$this->title = 'Главная';
+$this->title = 'Материалы для изготовления мебели по всей Украине | Ostatok | Остаток';
 
 use common\models\ProductSearch;
 use yii\widgets\ActiveForm;

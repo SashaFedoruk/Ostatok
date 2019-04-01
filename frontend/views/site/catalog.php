@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $model common\models\Category [] */
 
-$this->title = 'Каталог';
+$this->title = 'Каталог товаров - купить, продать, цены на сайте Ostatok | Остаток';
 ?>
 
 <div class="container block catalog-main-block">
