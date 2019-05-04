@@ -32,8 +32,8 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Материалы для изготовления мебели по всей Украине | Ostatok | Остаток"/>
-    <meta property="og:description" content="Раскроенные плиточные материалы - продать или купить по лучшим ценам можно здесь - Ostatok | Остаток | Лучший выбор материалов для мебели и их производства. Большой выбор. №1 в Украине. Жмите!"/>
+    <meta property="og:title" content="Плитные материалы для мебели, купить, продать|Ostatok|Остаток"/>
+    <meta property="og:description" content="Материалы для мебели, остатки, куски, плиты, материал ДСП, купить, продать по низким ценам - Остаток | Ostatok. Изготовление мебели, по всей Украине. Большой выбор материалов. Изготовление мебели. Производство плит"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://ostatok.online/"/>
     <meta property="og:site_name" content="Ostatok"/>
@@ -48,11 +48,11 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     
-    <meta name="title" content="Материалы для изготовления мебели по всей Украине | Ostatok | Остаток"/>
-    <meta name="description" content="Раскроенные плиточные материалы - продать или купить по лучшим ценам можно здесь - Ostatok | Остаток | Лучший выбор материалов для мебели и их производства. Большой выбор. №1 в Украине. Жмите!"/>
+    <meta name="title" content="Плитные материалы для мебели, купить, продать|Ostatok|Остаток"/>
+    <meta name="description" content="Материалы для мебели, остатки, куски, плиты, материал ДСП, купить, продать по низким ценам - Остаток | Ostatok. Изготовление мебели, по всей Украине. Большой выбор материалов. Изготовление мебели. Производство плит"/>
+    <meta name="keywords" content="ostatok, остаток, купить, продать, каталог, найти остаток, деловой остаток, плиточные материалы, материалы, плиты, материалы для мебели, дсп, столешницы дсп, искуственные камень, акриловые панели мдф,  плиты hpl, мдф, стеновые панели мдф, двп, панели, панели haute, лист материала" />
     <meta name="theme-color" content="#ff5722" />
     <meta name="google-site-verification" content="FWgRi8IkUZB2RLCtJW4IzFfDBC0cCJ9oTSN_qtQlskc" />
-
 </head>
 
 <body>
@@ -77,8 +77,8 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
 
                 <li class="main-menu"><?= Html::a("Главная", ['/site/index']) ?></li>
                 <li class="main-menu"><?= Html::a("Каталог", ['/site/catalog']) ?></li>
-                <li class="main-menu"><?= Html::a("Как это работает?", ['/site/index', '#' => 'seller']) ?></li>
-                <li class="main-menu hidden-md"><?= Html::a("Для кого?", ['/site/index', '#' => 'for-whom']) ?></li>
+                <li class="main-menu"><?= Html::a("Как это работает", ['/site/index', '#' => 'seller']) ?></li>
+                <li class="main-menu hidden-md"><?= Html::a("Для кого", ['/site/index', '#' => 'for-whom']) ?></li>
             </ul>
             <ul class="nav navbar-nav navbar-right language">
 
@@ -200,8 +200,8 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
 <!--                    <li class="bold">Меню</li>-->
 <!--                    <li >--><?//= Html::a("Главная", ['/site/index']) ?><!--</li>-->
 <!--                    <li >--><?//= Html::a("Каталог", ['/site/catalog']) ?><!--</li>-->
-<!--                    <li >--><?//= Html::a("Как это работает?", ['/site/index', '#' => 'seller']) ?><!--</li>-->
-<!--                    <li >--><?//= Html::a("Для кого?", ['/site/index', '#' => 'for-whom']) ?><!--</li>-->
+<!--                    <li >--><?//= Html::a("Как это работает", ['/site/index', '#' => 'seller']) ?><!--</li>-->
+<!--                    <li >--><?//= Html::a("Для кого", ['/site/index', '#' => 'for-whom']) ?><!--</li>-->
 <!--                </ul>-->
             </div>
             <div class="col-lg-push-4 col-lg-2 col-md-push-2 col-md-3 col-sm-push-1 col-sm-3 col-xs-push-1 col-xs-5">

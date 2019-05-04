@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $model common\models\Category [] */
 
-$this->title = 'Материалы для изготовления мебели по всей Украине | Ostatok | Остаток';
+$this->title = 'Плитные материалы для мебели, купить, продать|Ostatok|Остаток';
 
 use common\models\ProductSearch;
 use yii\widgets\ActiveForm;
@@ -133,7 +133,7 @@ $modelWidget = new ProductSearch();
 
 <div class="container" id="for-whom">
     <!-- Для кого? -->
-    <h2>Для кого?</h2>
+    <h2>Для кого</h2>
     <div class="row text-center space">
         <div class="col-lg-12">
             <p>
@@ -152,7 +152,7 @@ $modelWidget = new ProductSearch();
 
 <div class="container bottom-space">
     <!-- Как это работает? -->
-    <h2 class="down-space">Как это работает?</h2>
+    <h2 class="down-space">Как это работает</h2>
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 how-work">
             <p class="text-left">

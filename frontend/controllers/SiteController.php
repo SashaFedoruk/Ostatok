@@ -152,6 +152,20 @@ class SiteController extends Controller
         return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
 
     }
+    public function actionAutomateSendToArchive()
+    {
+//        $this->layout = "";
+//        echo "Cur Time: ". gmdate("Y-m-d", strtotime('-30 days'))."<br>";
+//        $ads = Ads::find()->where(['<=', 'created_at', strtotime('-30 days') ])->andWhere(['status' => 1])->all();
+//        foreach($ads as $el){
+//            echo gmdate("Y-m-d", $el->created_at)." ".$el->user_id." ".$el->user->firstname."<br>";
+//            $el->status = 0;
+//            $el->created_at = strtotime('now');
+//            $el->save();
+//        }
+//        return 0;
+
+    }
 
     public function actionSearch()
     {
@@ -184,15 +198,14 @@ class SiteController extends Controller
 
             return ['search' => $rez];
         }
-        if (Yii::$app->request->post()) {
-            $name = Yii::$app->request->post('ProductSearch')['name'];
+        if (Yii::$app->request->get()) {
+            $name = Yii::$app->request->get('ProductSearch')['name'];
             $params = explode('\s*', $name);
             $products = Product::find()->where(['like', 'name', $params]);
 
             $countQuery = clone $products;
             $pages = new Pagination(['totalCount' => $countQuery->count()]);
-            $pages->setPageSize(10);
-
+            $pages->setPageSize(12);
             $products = $products->offset($pages->offset)
                 ->limit($pages->limit)
                 ->all();
@@ -227,7 +240,12 @@ class SiteController extends Controller
     public function actionCatalog()
     {
         //$categories = Category::find()->joinWith(['products'])->groupBy(['category.id'])->having(['>', 'count(category.id)', '0'])->all();
-        $categories = Category::find()->joinWith(['products'])->groupBy(['category.id'])->having(['>', 'count(category.id)', '0'])->orderBy(['count(category.id)' => SORT_DESC])->all();
+        $categories = Category::find()->joinWith(['products'])->groupBy(['category.id'])->where(['category.id' => 15])->having(['>', 'count(category.id)', '0'])->orderBy(['count(category.id)' => SORT_DESC])->all();
+
+        $categories = array_merge($categories, Category::find()->joinWith(['products'])->groupBy(['category.id'])->where(['!=', 'category.id', 15])->having(['>', 'count(category.id)', '0'])->orderBy(['count(category.id)' => SORT_DESC])->all());
+
+//        $categories = Category::find()->where(['id' => 15])->joinWith(['products'])->groupBy(['category.id'])->having(['>', 'count(category.id)', '0'])->orderBy(['count(category.id)' => SORT_DESC])->all();
+
 
         return $this->render('catalog', [
             'model' => $categories
@@ -242,14 +260,18 @@ class SiteController extends Controller
      */
     public function actionViewProducts($categoryId, $producentId = -1)
     {
-        $products = Product::find()->where(['category_id' => $categoryId]);
+        $products = Product::find()->where(['product.category_id' => $categoryId]);
 
         if ($producentId != -1) {
             $products->andWhere(['producent_id' => $producentId]);
         }
 
+//        if (isset(Yii::$app->request->cookies['city_id'])) {
+//            $products = $products->joinWith(['ads'])->groupBy(['product.id'])->leftJoin('user', 'ads.user_id = user.id')->where(['user.city_id' => Yii::$app->request->cookies['city_id']->value]);
+//            $products = $products->orderBy(['count(ads.id)' => SORT_DESC]);
+//        }
 
-        $products = $products->orderBy('name');
+        $products = $products->addOrderBy('name');
 
 
 //        if (isset(Yii::$app->request->cookies['city_id'])) {
@@ -517,14 +539,14 @@ class SiteController extends Controller
             $cityId = Yii::$app->request->cookies['city_id']->value;
             $ads = $ads->joinWith(['user'])->where(['city_id' => $cityId]);
         }
-
+        $ads = $ads->andWhere(["ads.status" => 1]);
 
         if ($filterModel->load(Yii::$app->request->post())) {
             if ($filterModel->minSize != null) {
-                $ads = $ads->andWhere('width * length/1000000 >=' . (float)$filterModel->minSize);
+                $ads = $ads->andWhere('width >=' . (float)$filterModel->minSize);
             }
             if ($filterModel->maxSize != null) {
-                $ads = $ads->andWhere('width * length/1000000 <=' . (float)$filterModel->maxSize);
+                $ads = $ads->andWhere('length >=' . (float)$filterModel->maxSize);
             }
             if ($filterModel->sortBy != null) {
                 $list = [1 => 'По дате', 2 => 'По макс. цене', 3 => 'По мин. цене'];
@@ -1176,119 +1198,124 @@ class SiteController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
-//    public function actionAddDb()
-//    {
+    public function actionAddDb()
+    {
+
+
+
 //        $arr = '';
+//
 //        $data = explode("\n", $arr);
 //        $this->layout = "";
 //        $i = 0;
-////        foreach ($data as $el) {
-////            if ($el != "") {
-////                $cur = json_decode(trim($el), true);
-////                $tmp = Product::findOne(['name' => $cur['name']]);
-////                if($tmp == null){
-////
-////
-////                foreach ($cur as $key => $value) {
-////                    if ($key != "name" && $key != "img" && $key != "decoration" && $key != "Коллекция") {
-////                        if ($key != "Производитель") {
-////                            $prop = Property::findOne(['name' => $key, 'parent_id' => null]);
-////                            if ($prop == null) {
-////                                $prop = new Property();
-////                                $prop->name = $key;
-////                                $prop->parent_id = null;
-////                                $i++;
-////                                $prop->save();
-////                            }
-////                            $newPropValue = Property::findOne(['name' => $value, 'parent_id' => $prop->getPrimaryKey()]);
-////                            if ($newPropValue == null) {
-////                                $newPropValue = new Property();
-////                                $newPropValue->name = $value;
-////                                $newPropValue->parent_id = $prop->getPrimaryKey();
-////                                $newPropValue->isAnyField = 0;
-////                                $newPropValue->save();
-////                                $i++;
-////
-////                                //return $newPropValue->name.' || '.$newPropValue->parent_id.' || '.($newPropValue->validate() == true ? '1':'2');
-////                            }
-////                        } else {
-////                            $producent = Producent::findOne(['name' => $value]);
-////                            if ($producent == null) {
-////                                $producent = new Producent();
-////                                $producent->name = $value;
-////                                $producent->code = "0";
-////                                $i++;
-////                                $producent->save();
-////                                //return $key . ' none1';
-////                            }
-////                        }
-////                    }
-////                }
-////                }
-////            }
-////        }
+//        foreach ($data as $el) {
+//            if ($el != "") {
+//                $cur = json_decode(trim($el), true);
+//                $tmp = Product::findOne(['name' => $cur['name']]);
+//                if($tmp == null){
+//
+//
+//                foreach ($cur as $key => $value) {
+//                    if ($key != "name" && $key != "img" && $key != "decoration" && $key != "Коллекция") {
+//                        if ($key != "Производитель") {
+//                            $prop = Property::findOne(['name' => $key, 'parent_id' => null]);
+//                            if ($prop == null) {
+//                                $prop = new Property();
+//                                $prop->name = $key;
+//                                $prop->parent_id = null;
+//                                $i++;
+//                                $prop->save();
+//                            }
+//                            $newPropValue = Property::findOne(['name' => $value, 'parent_id' => $prop->getPrimaryKey()]);
+//                            if ($newPropValue == null) {
+//                                $newPropValue = new Property();
+//                                $newPropValue->name = $value;
+//                                $newPropValue->parent_id = $prop->getPrimaryKey();
+//                                $newPropValue->isAnyField = 0;
+//                               $newPropValue->save();
+//                                $i++;
+//
+//                                //return $newPropValue->name.' || '.$newPropValue->parent_id.' || '.($newPropValue->validate() == true ? '1':'2');
+//                            }
+//                        } else {
+//                            $producent = Producent::findOne(['name' => $value]);
+//                            if ($producent == null) {
+//                                $producent = new Producent();
+//                                $producent->name = $value;
+//                                $producent->code = "0";
+//                                $i++;
+//                                $producent->save();
+//                                //return $key . ' none1';
+//                            }
+//                        }
+//                    }
+//                }
+//                }
+//            }
+//        }
 //        $rez = "";
 //        $i = 0;
-//        $catId = 20;
+//        $catId = 15;
 //
-////        foreach ($data as $el) {
-////            if ($el != "") {
-////                $cur = json_decode($el, true);
-////                $prod = Product::findOne(['name' => $cur['name']]);
-//////                if(isset($cur['img']) && $prod->imgUrl == ""){
-//////                    $i++;
-//////                    $prod->imgUrl = "https://viyar.ua".$cur['img'];
-//////                    $prod->save();
-//////                }
-////                $prod = Product::findOne(['name' => $cur['name']]);
-////                if ($prod != null) {
+//        foreach ($data as $el) {
+//
+//            if ($el != "") {
+//                $cur = json_decode($el, true);
+//                $prod = Product::findOne(['name' => $cur['name']]);
+////                if(isset($cur['img']) && $prod->imgUrl == ""){
 ////                    $i++;
-////                    $rez .= $prod->name."<br>";
-////                    continue;
+////                    $prod->imgUrl = "https://viyar.ua".$cur['img'];
+////                    $prod->save();
 ////                }
-////
-////                $prod = new Product();
-////                //$prod->name = $cur['name'];
-////                $prod->name = $cur['name'];
-////
-////                $decoration = Decoration::findOne(['code' => $cur['decoration']]);
-////                if ($decoration == null) {
-////                    $decoration = Decoration::findOne(['name' => 'Другое']);
-////                }
-////                $prod->decoration_id = $decoration->id;
-////                $prod->imgUrl = $cur['img'];
-////                $prod->category_id = $catId;
-////                $prod->producent_id = Producent::findOne(['name' => $cur['Производитель']])->id;
-////                $prod->save();
-////                //$i++;
-////
-////
-////                foreach ($cur as $key => $value) {
-////                    if ($key != "name" && $key != "img" && $key != "decoration" && $key != "Коллекция" && $key != "Производитель") {
-////                        $prop = Property::findOne(['name' => $value]);
-////                        if($prop == null) {
-////                            continue;
-////                        }
-////                        $propCategory = PropertyCategory::findOne(['prop_id' => $prop->parent->id, 'category_id' => $catId]);
-////                        if ($propCategory == null) {
-////                            $propCategory = new PropertyCategory();
-////                            $propCategory->category_id = $catId;
-////                            $propCategory->prop_id = $prop->parent->id;
-////                            $propCategory->save();
-////                        }
-////                        $prodProp = new PropertyProduct();
-////                        $prodProp->product_id = $prod->getPrimaryKey();
-////                        $prodProp->prop_id = $prop->id;
-////                        $prodProp->save();
-////
-////                    }
-////
-////                }
-////
-////            }
-////        }
-//        return $i." ".$rez;
-//        //return $cur['name'];
+//                $prod = Product::findOne(['name' => $cur['name']]);
+//                if ($prod != null) {
+//                    $i++;
+//                    $rez .= $prod->name."<br>";
+//                    continue;
+//                }
 //
-//    }
+//                $prod = new Product();
+//                //$prod->name = $cur['name'];
+//                $prod->name = $cur['name'];
+//
+//                $decoration = Decoration::findOne(['code' => "123123"]);
+//                if ($decoration == null) {
+//                    $decoration = Decoration::findOne(['name' => 'Другое']);
+//                }
+//                $prod->decoration_id = $decoration->id;
+//                $prod->imgUrl = $cur['img'];
+//                $prod->category_id = $catId;
+//                $prod->producent_id = Producent::findOne(['name' => $cur['Производитель']])->id;
+//                $prod->save();
+//                //$i++;
+//
+//
+//                foreach ($cur as $key => $value) {
+//                    if ($key != "name" && $key != "img" && $key != "decoration" && $key != "Коллекция" && $key != "Производитель") {
+//                        $prop = Property::findOne(['name' => $value]);
+//                        if($prop == null) {
+//                            continue;
+//                        }
+//                        $propCategory = PropertyCategory::findOne(['prop_id' => $prop->parent->id, 'category_id' => $catId]);
+//                        if ($propCategory == null) {
+//                            $propCategory = new PropertyCategory();
+//                            $propCategory->category_id = $catId;
+//                            $propCategory->prop_id = $prop->parent->id;
+//                            $propCategory->save();
+//                        }
+//                        $prodProp = new PropertyProduct();
+//                        $prodProp->product_id = $prod->getPrimaryKey();
+//                        $prodProp->prop_id = $prop->id;
+//                        $prodProp->save();
+//
+//                    }
+//
+//                }
+//
+//            }
+//        }
+        //return $i." ".$rez;
+        //return $cur['name'];
+
+    }
 }

@@ -779,14 +779,23 @@ input.static {
     justify-content: center;
     align-items: center;
 }
-
+span.thelper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 .block-advert .date-block .to {
     width: 30%;
     background-color: #ff5722;
     border-radius: 3px 0 0 0;
     color: #fff;
 }
-
+.prod-img a:first-child{
+    display: inline-block;
+    height: 250px;
+    overflow: auto;
+    overflow-y: hidden;
+}
 .block-advert .date-block .date {
     width: 70%;
     border-radius: 0 3px 0 0;

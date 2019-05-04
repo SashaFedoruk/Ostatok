@@ -8,7 +8,7 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
 
 ?>
-<?php $form = ActiveForm::begin(['action' => ['site/search'], 'enableClientValidation' => false, 'options' => ['class' => 'navbar-form search-form'], 'id' => 'productsearch1']); ?>
+<?php $form = ActiveForm::begin(['method' => 'get','action' => ['site/search'], 'enableClientValidation' => false, 'options' => ['class' => 'navbar-form search-form'], 'id' => 'productsearch1']); ?>
     <?= $form->field($model, 'name', ['template' => "{input}"])->input('text', ['placeholder' => 'Найти остаток...', 'class' => 'form-control productsearch-name'])->label(false); ?>
     
     <div class="container rezult-search">

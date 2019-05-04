@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Breadcrumbs;
 use yii\widgets\Pjax;
 use common\models\Category;
 use yii\helpers\ArrayHelper;
@@ -13,6 +14,8 @@ use yii\widgets\ActiveForm;
 /* @var $ads common\models\Ads[] */
 
 $this->title = $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['site/catalog']];
+$this->params['breadcrumbs'][] = ['label' => $model->category->name, 'url' => ['site/view-products', 'categoryId' =>  $model->category->id]];
 $this->params['breadcrumbs'][] = $this->title;
 
 $urlPhoto = "img/Catalog/empty.png";
@@ -23,6 +26,17 @@ if($model->imgUrl != null && $model->imgUrl != ""){
 
 
     <div class="container">
+        <br>
+        <?php
+
+        echo Breadcrumbs::widget([
+            'homeLink' => [
+                'label' => Yii::t('yii', 'Главная'),
+                'url' => Yii::$app->homeUrl,
+            ],
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ])
+        ?>
         <div class="row">
             <h3 class="col-lg-12 text-center">
                 <?= $model->name; ?>
@@ -90,48 +104,42 @@ if($model->imgUrl != null && $model->imgUrl != ""){
         </h3>
         <?php 
             $list = [1 => 'По дате публикации', 2 => 'По макс. цене', 3 => 'По мин. цене'];
-            if(count($ads) > 0){
+
             ?>
         <div class="row">
             <?php $form = ActiveForm::begin(['enableClientValidation'=>false]); ?>
-            <div class="col-lg-12 col-md-12">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <label for="">Площадь, м2</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-sm-3 hidden-xs">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <label for="">Сортировка</label>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
             <div class="col-lg-12 col-md-12">
                 <div class="row">
 
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-3  col-sm-3">
                         <div class="row">
-                            <div class="col-lg-5 col-md-5 col-sm-5"><?= $form->field($filterModel, 'minSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'От'])->label(false); ?></div>
-                            <div class="col-lg-2 col-md-2  col-sm-2 hidden-xs" style="text-align: center;">-</div>
-                            <div class="col-lg-5 col-md-5  col-sm-5"><?= $form->field($filterModel, 'maxSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'До'])->label(false); ?></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for="">Ширина, от</label></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= $form->field($filterModel, 'minSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'От'])->label(false); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3  col-sm-3">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-xs"><label for="">Сортировка</label></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for="">Длина, от</label></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= $form->field($filterModel, 'maxSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'От'])->label(false); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-sm-3">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for="">Сортировка</label></div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= $form->field($filterModel, 'sortBy')->dropDownList($list)->label(false); ?>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-3  col-sm-3">
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for=""> </label></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= Html::submitButton('Фильтровать', ['class' => 'btn my2-btn my2-btn-full-size-w-m', 'style' => 'margin-top: 4px;']) ?>
+                            </div>
                         </div>
-                    <div class="col-lg-3  col-sm-3"><?= Html::submitButton('Фильтровать', ['class' => 'btn my2-btn my2-btn-full-size-w-m']) ?></div>
+                    </div>
 
                 </div>
             </div>
@@ -140,7 +148,7 @@ if($model->imgUrl != null && $model->imgUrl != ""){
         </div>
 
             <?php ActiveForm::end(); ?>
-            <?php }?>
+            <?php ?>
                    <br>
                     <?php
             

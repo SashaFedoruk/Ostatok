@@ -1,5 +1,6 @@
 <?php
 
+use yii\widgets\Breadcrumbs;
 use yii\widgets\LinkPager;
 
 /* @var $this yii\web\View */
@@ -7,7 +8,15 @@ use yii\widgets\LinkPager;
 /* @var pages */
 
 
-$this->title = 'Товары';
+$this->title = 'Товары '.$model[0]->category->name;
+$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['site/catalog']];
+if(Yii::$app->getRequest()->getQueryParam('producentId')){
+    $this->params['breadcrumbs'][] = ['label' => $model[0]->category->name, 'url' => ['site/view-products', 'categoryId' =>  $model[0]->category->id]];
+    $this->params['breadcrumbs'][] = $model[0]->producent->name;
+} else {
+    $this->params['breadcrumbs'][] = $model[0]->category->name;
+}
+
 ?>
 
 
@@ -45,6 +54,16 @@ $this->title = 'Товары';
 <!--</div>-->
 
 <div class="container catalog-container">
+    <?php
+
+    echo Breadcrumbs::widget([
+        'homeLink' => [
+            'label' => Yii::t('yii', 'Главная'),
+            'url' => Yii::$app->homeUrl,
+        ],
+        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+    ])
+    ?>
     <div class="row">
 
         <?php
@@ -74,8 +93,12 @@ $this->title = 'Товары';
                 'prevPageCssClass' => 'without-border',
                 'nextPageLabel' => '<span><img src="img/Catalog/next.png" alt=""></a</span>',
                 'nextPageCssClass' => 'without-border',
+                'lastPageLabel' => $pages->pageCount,
+                'lastPageCssClass' => 'page',
+                'firstPageCssClass' => 'page',
+                'firstPageLabel' => "1",
                 'activePageCssClass' => 'active',
-                'maxButtonCount' => 5,    // Set maximum number of page buttons that can be displayed
+                'maxButtonCount' => 7,    // Set maximum number of page buttons that can be displayed
 
             ]); ?>
         </div>

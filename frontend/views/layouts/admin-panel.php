@@ -45,8 +45,8 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
 
                 <li class="main-menu"><?= Html::a("Главная", ['/site/index']) ?></li>
                 <li class="main-menu"><?= Html::a("Каталог", ['/site/catalog']) ?></li>
-                <li class="main-menu"><?= Html::a("Как это работает?", ['/site/index', '#' => 'seller']) ?></li>
-                <li class="main-menu hidden-md"><?= Html::a("Для кого?", ['/site/index', '#' => 'for-whom']) ?></li>
+                <li class="main-menu"><?= Html::a("Как это работает", ['/site/index', '#' => 'seller']) ?></li>
+                <li class="main-menu hidden-md"><?= Html::a("Для кого", ['/site/index', '#' => 'for-whom']) ?></li>
             </ul>
             <ul class="nav navbar-nav navbar-right language">
 
@@ -211,8 +211,8 @@ if (!Yii::$app->user->isGuest) { ?>
 <!--                    <li class="bold">Меню</li>-->
 <!--                    <li >--><?//= Html::a("Главная", ['/site/index']) ?><!--</li>-->
 <!--                    <li >--><?//= Html::a("Каталог", ['/site/catalog']) ?><!--</li>-->
-<!--                    <li >--><?//= Html::a("Как это работает?", ['/site/index', '#' => 'seller']) ?><!--</li>-->
-<!--                    <li >--><?//= Html::a("Для кого?", ['/site/index', '#' => 'for-whom']) ?><!--</li>-->
+<!--                    <li >--><?//= Html::a("Как это работает", ['/site/index', '#' => 'seller']) ?><!--</li>-->
+<!--                    <li >--><?//= Html::a("Для кого", ['/site/index', '#' => 'for-whom']) ?><!--</li>-->
 <!--                </ul>-->
             </div>
             <div class="col-lg-push-4 col-lg-2 col-md-push-2 col-md-3 col-sm-push-1 col-sm-3 col-xs-push-1 col-xs-5">
