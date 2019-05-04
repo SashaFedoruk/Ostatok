@@ -16,6 +16,14 @@
     /*border-right: 4px solid transparent;*/
     /*border-left: 4px solid transparent;*/
 /*}*/
+.header-text{
+    margin-top: 9px;
+    line-height: 33px;
+    padding: 0 15px;
+}
+.header-text + div button{
+    width: 100%;
+}
 .search-form {
     position: relative;
 }

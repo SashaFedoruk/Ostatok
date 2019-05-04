@@ -59,3 +59,32 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+
+<?php
+$urlNotifications = URL::toRoute(['site/add-notification']);
+$script = <<< JS
+    $( document ).ready(function() {
+        if (window.location.href.indexOf('adsId=') > 0) {
+            
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            //("#i" + vars['adsId']).trigger("click");
+            if(confirm('Вы уверены что хотите удалить данное обьявления?')){
+                window.location.href = $("#i" + vars['adsId']).attr('href');
+            }
+        }
+       
+});
+    
+    
+    
+    
+JS;
+$this->registerJs(
+    $script,
+    yii\web\View::POS_END,
+    'help-js'
+);
+?>

@@ -52,7 +52,7 @@ $dataEnd = gmdate("Y-m-d", $dataEnd);
                     <button class="btn my2-btn top-space hidden-info" data-id="n<?= $model->id ?>">Скрыть контакты продавца</button>
                 </div>
             </div>
-            <button class="btn my2-btn show-info" data-id="n<?= $model->id ?>">Посмотреть контакты продавца</button>
+            <button class="btn my2-btn show-info" data-id="n<?= $model->id ?>" data-ads-id="<?= $model->id ?>">Посмотреть контакты продавца</button>
         </div>
         <div class="col-lg-5 col-md-6 col-xs-12 text-right seller-price-block vcenter">
             <div class="row text-center">

@@ -21,6 +21,7 @@ use yii\db\ActiveRecord;
  * @property User $user
  * @property Product $product
  * @property AdsStats[] $adsStats
+ * @property Notifications[] $notifications
  */
 class Ads extends \yii\db\ActiveRecord
 {
@@ -94,6 +95,13 @@ class Ads extends \yii\db\ActiveRecord
     public function getAdsStats()
     {
         return $this->hasMany(AdsStats::className(), ['ads_id' => 'id']);
+    }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getNotifications()
+    {
+        return $this->hasMany(Notifications::className(), ['ads_id' => 'id']);
     }
 
 

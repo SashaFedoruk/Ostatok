@@ -17,34 +17,43 @@
       <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="915" lean-forward="true" selection-start-line="915" selection-end-line="915" />
+            <state relative-caret-position="272">
+              <caret line="545" column="10" selection-start-line="545" selection-start-column="10" selection-end-line="545" selection-end-column="10" />
               <folding>
-                <marker date="1556563349599" expanded="true" signature="47268:49760" ph="..." />
+                <element signature="e#15086#15157#0#PHP" />
+                <element signature="e#15163#15856#0#PHP" />
+                <element signature="e#15862#17227#0#PHP" />
+                <element signature="e#17233#18068#0#PHP" />
+                <element signature="e#18074#19280#0#PHP" />
+                <marker date="1556992919110" expanded="true" signature="50081:52573" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <file leaf-file-name="all-active-ads.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/site/all-active-ads.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="459">
+              <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ads.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/Ads.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="main-local.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/config/main-local.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="2" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="view-product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/site/view-product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="141" />
+            <state relative-caret-position="152">
+              <caret line="196" column="1" selection-start-line="196" selection-start-column="1" selection-end-line="245" selection-end-column="2" />
               <folding>
                 <element signature="e#7#28#0#PHP" expanded="true" />
               </folding>
@@ -52,42 +61,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view-products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/view-products.php">
+      <file leaf-file-name="create-ads.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/site/create-ads.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="64" />
-              <folding>
-                <element signature="e#7#35#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1156">
+              <caret line="59" selection-start-line="59" selection-end-line="59" selection-end-column="85" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdsFilterForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/models/AdsFilterForm.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="_partial-ads-product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/views/site/_partial-ads-product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="54" column="69" lean-forward="true" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="all-active-ads.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/all-active-ads.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/web/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="_partial-active-ads.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/views/site/_partial-active-ads.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="catalog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/catalog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="510">
+              <caret line="33" column="144" lean-forward="true" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -96,11 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>product</find>
-      <find>products</find>
-      <find>products(</find>
-      <find>update</find>
-      <find>top</find>
       <find>.hidden</find>
       <find>createC</find>
       <find>Coo</find>
@@ -126,6 +126,11 @@
       <find>viewProd</find>
       <find>viewPro</find>
       <find>joinWith</find>
+      <find>created_at</find>
+      <find>active-ads</find>
+      <find>updateuser</find>
+      <find>send</find>
+      <find>allAc</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -139,10 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/views/site/_partial-archive-ads.php" />
-        <option value="$USER_HOME$/Downloads/main-catalog.html" />
-        <option value="$PROJECT_DIR$/frontend/views/site/_partial-catalog-item.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/_partial-index-catalog-item.php" />
         <option value="$USER_HOME$/Downloads/Ostatok(v.1.8+)/RU/catalog.html" />
         <option value="$PROJECT_DIR$/backend/models/ProductSearch.php" />
         <option value="$PROJECT_DIR$/backend/views/site/products.php" />
@@ -169,26 +170,30 @@
         <option value="$PROJECT_DIR$/backend/web/css/main.css" />
         <option value="$PROJECT_DIR$/common/models/Decoration.php" />
         <option value="$PROJECT_DIR$/backend/views/site/create-ads.php" />
-        <option value="$PROJECT_DIR$/common/models/User.php" />
         <option value="$PROJECT_DIR$/frontend/models/SignupForm.php" />
         <option value="$PROJECT_DIR$/common/models/UserUpdateForm.php" />
         <option value="$PROJECT_DIR$/backend/views/site/_form-user-update.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/_form-user-update.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/signup.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/login.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/_partial-ads-product.php" />
         <option value="$PROJECT_DIR$/backend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/create-ads.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/_partial-active-ads.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/_partial-view-products-item.php" />
-        <option value="$PROJECT_DIR$/frontend/web/css/main.css" />
         <option value="$PROJECT_DIR$/frontend/widgets/searchwidget/views/search.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/admin-panel.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/view-product.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/view-products.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/catalog.php" />
+        <option value="$PROJECT_DIR$/frontend/web/css/main.css" />
+        <option value="$PROJECT_DIR$/common/models/Ads.php" />
+        <option value="$PROJECT_DIR$/common/models/User.php" />
+        <option value="$PROJECT_DIR$/common/models/Notifications.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/_partial-ads-product.php" />
+        <option value="$PROJECT_DIR$/frontend/config/main-local.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/view-product.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/_partial-active-ads.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/all-active-ads.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
       </list>
     </option>
@@ -304,29 +309,30 @@
             <path>
               <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
@@ -347,6 +353,19 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ostatok" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ostatok" type="b2602c69:ProjectViewProjectNode" />
@@ -446,14 +465,16 @@
       <workItem from="1556541785239" duration="960000" />
       <workItem from="1556562301623" duration="1647000" />
       <workItem from="1556913504755" duration="140000" />
+      <workItem from="1556979401156" duration="12979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227012000" />
+    <option name="totallyTimeSpent" value="239991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -465,6 +486,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1925" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -474,7 +496,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3298292" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,36 +506,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/_form-top-up.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="114" selection-start-line="13" selection-start-column="114" selection-end-line="13" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/layouts/main-old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/layouts/unauth-main-layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Producent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/site/create-producent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -626,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/UserUpdateForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="102" column="43" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/site/update-user.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -676,24 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/_partial-ads-product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/site/create-ads.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/create-ads.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="140" column="9" selection-start-line="134" selection-start-column="7" selection-end-line="140" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -718,13 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13328">
-          <caret line="784" column="27" selection-start-line="784" selection-start-column="27" selection-end-line="784" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -759,38 +726,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/all-active-ads.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/_partial-active-ads.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/AdsFilterForm.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/Ads.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/view-product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="141" />
-          <folding>
-            <element signature="e#7#28#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/site/view-products.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -809,12 +746,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/AdsStats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Ads.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-392">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/UserUpdateForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="102" column="43" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/create-ads.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1156">
+          <caret line="59" selection-start-line="59" selection-end-line="59" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/models/ContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/Notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="2" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/view-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="196" column="1" selection-start-line="196" selection-start-column="1" selection-end-line="245" selection-end-column="2" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/_partial-ads-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="54" column="69" lean-forward="true" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/_partial-active-ads.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="144" lean-forward="true" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/all-active-ads.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="915" lean-forward="true" selection-start-line="915" selection-end-line="915" />
+        <state relative-caret-position="272">
+          <caret line="545" column="10" selection-start-line="545" selection-start-column="10" selection-end-line="545" selection-end-column="10" />
           <folding>
-            <marker date="1556563349599" expanded="true" signature="47268:49760" ph="..." />
+            <element signature="e#15086#15157#0#PHP" />
+            <element signature="e#15163#15856#0#PHP" />
+            <element signature="e#15862#17227#0#PHP" />
+            <element signature="e#17233#18068#0#PHP" />
+            <element signature="e#18074#19280#0#PHP" />
+            <marker date="1556992919110" expanded="true" signature="50081:52573" ph="..." />
           </folding>
         </state>
       </provider>

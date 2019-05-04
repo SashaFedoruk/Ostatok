@@ -31,7 +31,7 @@ if($model->product->imgUrl != null && $model->product->imgUrl != ""){
     <div class="nav-btn">
         <?= Html::a('<img src="img/Admin/see.png" alt="Посмотреть">', ['site/view-product', 'id' => $model->product->id]); ?>
         <?= Html::a('<img src="img/copy.png" alt="Создать копию">', ['site/copy-ads', 'id' => $model->id]); ?>
-        <?= Html::a('<img src="img/Admin/delete.png" alt="Удалить">', ['site/delete-ads', 'id' => $model->id]); ?>
+        <?= Html::a('<img src="img/Admin/delete.png" alt="Удалить" onclick="return confirm(\'Вы уверены что хотите удалить данное обьявления?\')">', ['site/delete-ads', 'id' => $model->id], ['id'=>"i".$model->id]); ?>
 
     </div>
     <hr>

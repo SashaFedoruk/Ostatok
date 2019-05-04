@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use yii\widgets\Pjax;
 use common\models\Category;
@@ -38,8 +39,14 @@ if($model->imgUrl != null && $model->imgUrl != ""){
         ])
         ?>
         <div class="row">
-            <h3 class="col-lg-12 text-center">
-                <?= $model->name; ?>
+            <h3 class="col-lg-offset-1 col-lg-10 col-md-offset-0 col-md-12 col-sm-offset-1 col-sm-10 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-9 text-center header-text"><?= $model->name; ?></div>
+                    <div class="col-lg-3">
+                        <button type="button" class="btn navbar-btn my2-btn" id="btn-go-to-offers">Показать предложения</button>
+                    </div>
+                </div>
+
             </h3>
         </div>
         <div class="row">
@@ -99,7 +106,7 @@ if($model->imgUrl != null && $model->imgUrl != ""){
                 </div>
             </div>
         </div>
-        <h3>Предложения продавцов на
+        <h3 id="offers-block">Предложения продавцов на
             <?= $model->name; ?>
         </h3>
         <?php 
@@ -188,6 +195,7 @@ if($model->imgUrl != null && $model->imgUrl != ""){
 
     </div>
     <?php
+    $urlNotifications = URL::toRoute(['site/add-notification']);
 $script = <<< JS
     $( document ).ready(function() {
         $(".show-info").click(function(e){
@@ -200,6 +208,30 @@ $script = <<< JS
              $(id + " .show-info").css("display", "inline-block");
             $(id + " .hidden-block").css("display", "none");
         });
+        $('#btn-go-to-offers').click(function (){
+            $('html, body').animate({
+              scrollTop: $("#offers-block").offset().top
+            }, 1000);
+        });
+        
+        $('.show-info').click(function (e){
+            var adsId = $(e.target).attr("data-ads-id"); 
+            $.ajax({
+                url:  "$urlNotifications",
+                type: 'post',
+                data: {
+                    adsId : adsId
+                },
+                success: function (data) {
+                    if( data.search ){
+                       
+                    } else {
+                       
+                    }
+                }
+            });
+        });
+       
 });
     
     

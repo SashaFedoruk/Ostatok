@@ -7,6 +7,7 @@ use backend\models\CreatePropertyCategoriesForm;
 use common\models\AdsStats;
 use common\models\City;
 use common\models\Decoration;
+use common\models\Notifications;
 use common\models\Producent;
 use common\models\Product;
 use common\models\AdsForm;
@@ -71,8 +72,8 @@ class SiteController extends Controller
                             'get-property-values', 'delete-property', 'delete-category', 'property-categories',
                             'get-properties-for-category', 'add-product', 'create-producent', 'delete-producent',
                             'get-fields-for-category', 'products', 'delete-product', 'view-product', 'update-product',
-                            'create-ads', 'get-producents-by-category-id', 'products-by-category-id-and-producent-id', 'decorations-by-category-id-and-producent-id', 'heights-by-category-id-and-producent-id', 'all-active-ads',
-                            'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'search', 'copy-ads', 'create-ads-by-product-id'],
+                            'create-ads', 'get-producents-by-category-id', 'products-by-category-id-and-producent-id', 'decorations-by-category-id-and-producent-id', 'heights-by-category-id-and-producent-id',
+                            'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'search', 'copy-ads', 'create-ads-by-product-id', 'add-notification', 'all-active-ads'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -324,7 +325,9 @@ class SiteController extends Controller
                 'value' => $user->city_id
             ]));
 
-
+            if(Yii::$app->getRequest()->getQueryParam('url')){
+                return $this->redirect(Yii::$app->getRequest()->getQueryParam('url'));
+            }
             return $this->redirect(['index']);
         } else if ($signUpModel->load(Yii::$app->request->post()) && $user = $signUpModel->signup()) {
             YII::warning("Start signup");
@@ -424,6 +427,8 @@ class SiteController extends Controller
         return null;
     }
 
+    // START AJAX
+
     public function actionGetProducentsByCategoryId()
     {
         if (Yii::$app->request->isAjax) {
@@ -507,7 +512,73 @@ class SiteController extends Controller
             return ['search' => $rez];
         }
     }
+    public function actionAddNotification()
+    {
+        if (Yii::$app->request->isAjax) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            $data = Yii::$app->request->post();
 
+            $adsId = (int)$data['adsId'];
+
+            $date = strtotime('-7 days');
+
+            $notifications = Notifications::find()->where(['ads_id' => $adsId])->andWhere(['>', 'created_at', $date])->all();
+
+            if(count($notifications) == 0){
+                $newNotification = new Notifications();
+                $newNotification->ads_id = $adsId;
+                $newNotification->save();
+                return ['status' => 'added'];
+            }
+
+
+            return ['status' => 'iseet'];
+        }
+    }
+
+
+
+    // END AJAX
+
+    public function actionSendNotifications(){
+        $this->layout = "";
+
+        //echo $this->sendNotificationsByDay(0)." ";
+        echo $this->sendNotificationsByDay(3)." ";
+        echo $this->sendNotificationsByDay(7);
+        return "Ok";
+    }
+
+    private function sendNotificationsByDay($days){
+        $notifications = Notifications::find()->where(['=', 'DATEDIFF(NOW(), FROM_UNIXTIME(created_at))', $days])->all();
+        foreach ($notifications as $el){
+            if($el->ads->status != 1){
+                continue;
+            }
+            $emailAdress = $el->ads->user->email;
+            $url = "http://ostatok.online".Url::toRoute(['site/all-active-ads', 'adsId' => $el->ads->id ]);
+            //$emailAdress = "sasha1.fedoruk@gmail.com";
+            $text = "
+            <h3>Здравствуйте, ".$el->ads->user->firstname."</h3>
+            <p>Вы уже продали свой остаток товара <b>".$el->ads->product->name."</b> (".$el->ads->width."x".$el->ads->length.")?</p>
+            <p>Если данное обьявления уже не актуально, удалите пожалуйста ваше обьявления перейдя по данной ссылке: $url</p>
+            <br>
+            <p>С уважением,<br> Служба поддержки http://ostatok.online</p>
+            
+            ";
+
+            Yii::$app->mailer->compose()
+                ->setTo($emailAdress)
+                ->setFrom("support@ostatok.online")
+                ->setSubject("Вы уже продали свой остаток товара ".$el->ads->product->name." (".$el->ads->width."x".$el->ads->length.")?")
+                ->setHtmlBody($text)
+                ->send();
+            if($days == 7){
+                $el->delete();
+            }
+        }
+        return count($notifications);
+    }
     /**
      * Deletes an existing Ads model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -583,6 +654,9 @@ class SiteController extends Controller
      */
     public function actionAllActiveAds()
     {
+        if ( Yii::$app->user->isGuest )
+            return $this->redirect(['site/login', 'url' => YII::$app->request->url]);
+
         $this->layout = "admin-panel";
         $model = Ads::find()->where(['status' => 1])->andWhere(['user_id' => YII::$app->user->id])->orderBy(['updated_at' => SORT_DESC]);
         $sum = $model->sum('price');
