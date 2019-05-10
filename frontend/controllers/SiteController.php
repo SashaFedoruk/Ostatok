@@ -542,10 +542,10 @@ class SiteController extends Controller
 
     public function actionSendNotifications(){
         $this->layout = "";
-
+        echo $this->sendNotificationsByDay(4)." ";
         //echo $this->sendNotificationsByDay(0)." ";
-        echo $this->sendNotificationsByDay(3)." ";
-        echo $this->sendNotificationsByDay(7);
+//        echo $this->sendNotificationsByDay(3)." ";
+//        echo $this->sendNotificationsByDay(7);
         return "Ok";
     }
 
