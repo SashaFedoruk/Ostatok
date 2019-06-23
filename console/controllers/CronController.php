@@ -32,7 +32,7 @@ class CronController extends Controller {
             }
             $emailAdress = $el->ads->user->email;
 
-            $url = "http://ostatok.online/frontend/web/index.php?r=site%2Fall-active-ads&adsId=" + $el->ads->id;
+            $url = "http://ostatok.online/frontend/web/index.php?r=site%2Fall-active-ads&adsId=".$el->ads->id;
             //$emailAdress = "sasha1.fedoruk@gmail.com";
             $text = "
             <h3>Здравствуйте, ".$el->ads->user->firstname."</h3>
