@@ -39,17 +39,6 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
-  'unclead/yii2-multiple-input' => 
-  array (
-    'name' => 'unclead/yii2-multiple-input',
-    'version' => '2.18.0.0',
-    'alias' => 
-    array (
-      '@unclead/multipleinput/examples' => $vendorDir . '/unclead/yii2-multiple-input/examples',
-      '@unclead/multipleinput' => $vendorDir . '/unclead/yii2-multiple-input/src',
-      '@unclead/multipleinput/tests' => $vendorDir . '/unclead/yii2-multiple-input/tests',
-    ),
-  ),
   '2amigos/yii2-multi-select-widget' => 
   array (
     'name' => '2amigos/yii2-multi-select-widget',
@@ -71,10 +60,30 @@ return array (
   'yiisoft/yii2-bootstrap' => 
   array (
     'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '2.0.9.0',
+    'version' => '2.0.10.0',
     'alias' => 
     array (
       '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap/src',
+    ),
+  ),
+  'unclead/yii2-multiple-input' => 
+  array (
+    'name' => 'unclead/yii2-multiple-input',
+    'version' => '2.21.2.0',
+    'alias' => 
+    array (
+      '@unclead/multipleinput/examples' => $vendorDir . '/unclead/yii2-multiple-input/examples',
+      '@unclead/multipleinput' => $vendorDir . '/unclead/yii2-multiple-input/src',
+      '@unclead/multipleinput/tests' => $vendorDir . '/unclead/yii2-multiple-input/tests',
+    ),
+  ),
+  'moonlandsoft/yii2-phpexcel' => 
+  array (
+    'name' => 'moonlandsoft/yii2-phpexcel',
+    'version' => '2.0.0.0',
+    'alias' => 
+    array (
+      '@moonland/phpexcel' => $vendorDir . '/moonlandsoft/yii2-phpexcel',
     ),
   ),
 );

@@ -167,6 +167,7 @@ if (!Yii::$app->user->isGuest) { ?>
                             <li><?= Html::a('Все активные обьявления', ['/site/all-active-ads']) ?></li>
                             <li><?= Html::a('Создать обьявления', ['/site/create-ads']) ?></li>
                             <li><?= Html::a('Архив', ['/site/all-archive-ads']) ?></li>
+                            <li><?= Html::a('Загрузить Excel файл', ['/site/xl-upload']) ?></li>
                         </ul>
                     </li>
                 </ul>

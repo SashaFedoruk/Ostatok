@@ -21,7 +21,8 @@
         "unclead/yii2-multiple-input": "~2.0",
         "2amigos/yii2-multi-select-widget": "*",
         "delagics/yii2-liqpay": "^1.0",
-        "liqpay/liqpay": "^1.2"
+        "liqpay/liqpay": "^1.2",
+        "moonlandsoft/yii2-phpexcel": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

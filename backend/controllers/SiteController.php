@@ -60,7 +60,7 @@ class SiteController extends Controller
                             'get-fields-for-category', 'products', 'delete-product', 'view-product', 'update-product',
                             'create-ads', 'get-producents-by-category-id', 'products-by-category-id-and-producent-id', 'all-active-ads',
                             'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'create-decoration', 'delete-decoration',
-                            'decorations-by-category-id-and-producent-id', 'users-list', 'stats', 'copy-ads'
+                            'decorations-by-category-id-and-producent-id', 'users-list', 'stats', 'copy-ads','xl-upload'
 
 
                         ],
@@ -544,7 +544,16 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+    
+    //Konstantin Chernyh Excel upload
+public function actionXlUpload()
+    {
+        $model = Ads::find()->where(['status' => 0])->all();
 
+        return $this->render('all-archive-ads', [
+            'model' => $model
+        ]);
+    }
     /**
      * Create Ads.
      * If creation is successful, the browser will be redirected to the 'view' page.

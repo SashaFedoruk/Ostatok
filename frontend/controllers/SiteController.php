@@ -15,6 +15,7 @@ use common\models\Ads;
 use common\models\ProductSearch;
 use common\models\PropertyProduct;
 use common\models\PropertyCategory;
+use common\models\XlUpload;
 
 use frontend\models\TopUpForm;
 use LiqPay;
@@ -45,7 +46,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use yii\web\UploadedFile;
+use \moonland\phpexcel\Excel;
 
 /**
  * Site controller
@@ -73,7 +75,7 @@ class SiteController extends Controller
                             'get-properties-for-category', 'add-product', 'create-producent', 'delete-producent',
                             'get-fields-for-category', 'products', 'delete-product', 'view-product', 'update-product',
                             'create-ads', 'get-producents-by-category-id', 'products-by-category-id-and-producent-id', 'decorations-by-category-id-and-producent-id', 'heights-by-category-id-and-producent-id',
-                            'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'search', 'copy-ads', 'create-ads-by-product-id', 'add-notification', 'all-active-ads'],
+                            'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'search', 'copy-ads', 'create-ads-by-product-id', 'add-notification', 'all-active-ads','xl-upload'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -870,6 +872,62 @@ class SiteController extends Controller
             'sum' => $sum,
             'count' => $count
         ]);
+    }
+    //Konstantin Chernyh Excel Upload
+       public function actionXlUpload()
+    {
+        $this->layout = "admin-panel";
+        //$model = Ads::find()->where(['status' => 0])->andWhere(['user_id' => YII::$app->user->id])->orderBy(['updated_at' => SORT_DESC]);
+       // $sum = $model->sum('price');
+       // $count = $model->count();
+       // $model = $model->all();
+        $model=new XlUpload();
+        $params=['model' => $model];
+         if (Yii::$app->request->isPost) {
+            $model->xlFile = UploadedFile::getInstance($model, 'xlFile');
+            $newfile=$model->upload();
+            //var_dump($newfile);
+            if ($newfile) {
+                    $data = Excel::import($newfile, ['setIndexSheetByName' => false,
+                        'setFirstRecordAsKeys' => false,
+                        'getOnlySheet' => 1]);
+           // $data= array_values($data);
+                    foreach ($data as $data_item)
+                    {
+                        $data_item= array_values($data_item);
+                        //var_dump($data_item);
+                        If(is_numeric($data_item[1]))
+                        {
+                            $ostatok_id=$data_item[1];
+                            $ostatok_name=$data_item[2];
+                            $ostatok_wl=$data_item[4];
+                            $ostatok_h=$data_item[5];
+                            
+                            if($ostatok_id&&$ostatok_name&&$ostatok_wl&&$ostatok_h)
+                            {
+                                echo  "$ostatok_id--$ostatok_name--$ostatok_wl--$ostatok_h<br>";
+                           }
+                        }
+                        else
+                        {
+                           // echo $data_item[1]."NAN<br>";
+                        }
+                    }
+           // var_dump($data);
+                    die();
+               $params['result']="файл загружен";
+               
+            }
+            else
+            {
+                $params['result']="Ошибка загрузки!";
+            }
+        }
+        else
+        {
+                $params['result']=NULL;
+        }
+        return $this->render('xl-upload', $params);
     }
 
     public function getPrice($width, $length)

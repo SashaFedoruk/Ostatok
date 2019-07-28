@@ -189,6 +189,11 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
     public $jsPositions = [View::POS_HEAD, View::POS_BEGIN, View::POS_END, View::POS_READY, View::POS_LOAD];
 
     /**
+     * @var bool add a new line to the beginning of the list, not to the end
+     */
+    public $prepend = false;
+
+    /**
      * @inheritdoc
      */
     public function setContext($context)
@@ -411,7 +416,8 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
             'max'               => $this->max,
             'min'               => $this->min,
             'attributes'        => $this->prepareJsAttributes(),
-            'indexPlaceholder'  => $this->getIndexPlaceholder()
+            'indexPlaceholder'  => $this->getIndexPlaceholder(),
+            'prepend'           => $this->prepend
         ], $this->jsExtraSettings));
 
         $js = "jQuery('#{$this->id}').multipleInput($options);";
@@ -430,7 +436,20 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
         MultipleInputSortableAsset::register($view);
 
         // todo override when ListRenderer will use div markup
-        $options = Json::encode([
+        $options = Json::encode($this->getJsSortableOptions());
+        $js = "$('#{$this->id} .multiple-input-list').sorting($options);";
+        $view->registerJs($js);
+    }
+
+    /**
+     * Returns an array of JQuery sortable plugin options.
+     * You can override this method extend plugin behaviour.
+     * 
+     * @return array
+     */
+    protected function getJsSortableOptions()
+    {
+        return [
             'containerSelector' => 'table',
             'itemPath'          => '> tbody',
             'itemSelector'      => 'tr',
@@ -445,9 +464,7 @@ abstract class BaseRenderer extends BaseObject implements RendererInterface
                     wrapper.trigger(event, [item]);
                 }
             ")
-        ]);
-        $js = "$('#{$this->id} table').sorting($options);";
-        $view->registerJs($js);
+        ];
     }
 
     /**

@@ -9,6 +9,8 @@
 namespace unclead\multipleinput\components;
 
 use Closure;
+use Yii;
+use yii\base\DynamicModel;
 use yii\base\InvalidConfigException;
 use yii\base\Model;
 use yii\base\BaseObject;
@@ -16,6 +18,7 @@ use yii\db\ActiveRecordInterface;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
+use yii\web\JsExpression;
 use unclead\multipleinput\renderers\BaseRenderer;
 
 /**
@@ -147,7 +150,13 @@ abstract class BaseColumn extends BaseObject
      * @since 2.18.0
      */
     public $columnOptions = [];
-    
+
+    /**
+     * @var string the template of input for customize view.
+     * For example: '<div class="input-group"><span class="input-group-addon"><i class="fas fa-mobile-alt"></i></span>{input}</div>'
+     */
+    public $inputTemplate = '{input}';
+
     /**
      * @var Model|ActiveRecordInterface|array
      */
@@ -192,13 +201,26 @@ abstract class BaseColumn extends BaseObject
             $this->name = self::DEFAULT_STATIC_COLUMN_NAME;
         }
 
-        if (empty($this->name)) {
+        if ($this->isNameEmpty()) {
             throw new InvalidConfigException("The 'name' option is required.");
         }
 
         if (empty($this->options)) {
             $this->options = [];
         }
+    }
+
+    private function isNameEmpty()
+    {
+        if (empty($this->name)) {
+            if ($this->name === 0 || $this->name === '0') {
+                return false;
+            }
+
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -212,14 +234,19 @@ abstract class BaseColumn extends BaseObject
 
     /**
      * Prepares the value of column.
-     *
+     * @param array $contextParams the params who passed to closure:
+     * string $id the id of input element
+     * string $name the name of input element
+     * string $indexPlaceholder The index placeholder of multiple input. The {$indexPlaceholder} template will be replace by $index
+     * int $index The index of multiple input
+     * int $columnIndex The index of current model attributes
      * @return mixed
      */
-    protected function prepareValue()
+    protected function prepareValue($contextParams = [])
     {
         $data = $this->getModel();
         if ($this->value instanceof \Closure) {
-            $value = call_user_func($this->value, $data);
+            $value = call_user_func($this->value, $data, $contextParams);
         } else {
             $value = null;
             if ($data instanceof ActiveRecordInterface ) {
@@ -282,11 +309,18 @@ abstract class BaseColumn extends BaseObject
     /**
      * Renders the input.
      *
-     * @param string    $name the name of the input
-     * @param array     $options the HTML options of input
+     * @param string $name the name of the input
+     * @param array $options the HTML options of input
+     * @param array $contextParams the params who passed to closure:
+     * string $id the id of input element
+     * string $name the name of input element
+     * string $indexPlaceholder The index placeholder of multiple input. The {$indexPlaceholder} template will be replace by $index
+     * int $index The index of multiple input
+     * int $columnIndex The index of current model attributes
      * @return string
+     * @throws InvalidConfigException
      */
-    public function renderInput($name, $options)
+    public function renderInput($name, $options, $contextParams = [])
     {
         if ($this->options instanceof \Closure) {
             $optionsExt = call_user_func($this->options, $this->getModel());
@@ -297,9 +331,14 @@ abstract class BaseColumn extends BaseObject
         $options = ArrayHelper::merge($options, $optionsExt);
         $method = 'render' . Inflector::camelize($this->type);
 
+        // @see https://github.com/unclead/yii2-multiple-input/issues/261
+        if (isset($contextParams['index']) && isset($contextParams['indexPlaceholder'])) {
+            $options = $this->replaceIndexPlaceholderInOptions($options, $contextParams['indexPlaceholder'], $contextParams['index']);
+        }
+
         $value = null;
         if ($this->type !== self::TYPE_DRAGCOLUMN) {
-            $value = $this->prepareValue();
+            $value = $this->prepareValue($contextParams);
         }
 
         if (isset($options['items'])) {
@@ -312,9 +351,28 @@ abstract class BaseColumn extends BaseObject
             $input = $this->renderDefault($name, $value, $options);
         }
 
-        return $input;
+        return strtr($this->inputTemplate, ['{input}' => $input]);
     }
 
+    private function replaceIndexPlaceholderInOptions($options, $indexPlaceholder, $index)
+    {
+        $result = [];
+        foreach ($options as $key => $value) {
+            if (is_array($value)) {
+                $result[$key] = $this->replaceIndexPlaceholderInOptions($value, $indexPlaceholder, $index);
+            } elseif (is_string($value)) {
+                $result[$key] = str_replace('{' . $indexPlaceholder . '}', $index, $value);
+            } else {
+                if ($value instanceof JsExpression) {
+                    $value->expression = str_replace('{' . $indexPlaceholder . '}', $index, $value->expression);
+                }
+
+                $result[$key] = $value;
+            }
+        }
+
+        return $result;
+    }
 
     /**
      * Renders drop down list.
@@ -584,7 +642,6 @@ abstract class BaseColumn extends BaseObject
 
         $model = $this->getModel();
         if ($model instanceof Model) {
-            $model->{$this->name} = $value;
             $widgetOptions = [
                 'model'     => $model,
                 'attribute' => $this->name,
@@ -592,7 +649,8 @@ abstract class BaseColumn extends BaseObject
                 'options'   => [
                     'id'        => $this->normalize($name),
                     'name'      => $name,
-                    'tabindex'  => self::TABINDEX
+                    'tabindex'  => self::TABINDEX,
+                    'value'     => $value
                 ]
             ];
         } else {
@@ -600,7 +658,10 @@ abstract class BaseColumn extends BaseObject
                 'name'      => $name,
                 'value'     => $value,
                 'options'   => [
-                    'tabindex'  => self::TABINDEX
+                    'id'        => $this->normalize($name),
+                    'name'      => $name,
+                    'tabindex'  => self::TABINDEX,
+                    'value'     => $value
                 ]
             ];
         }

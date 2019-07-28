@@ -200,6 +200,11 @@ class TabularInput extends Widget
     public $iconSource = self::ICONS_SOURCE_GLYPHICONS;
 
     /**
+     * @var bool add a new line to the beginning of the list, not to the end
+     */
+    public $prepend = false;
+
+    /**
      * Initialization.
      *
      * @throws \yii\base\InvalidConfigException
@@ -249,7 +254,7 @@ class TabularInput extends Widget
     /**
      * @return TableRenderer
      */
-    private function createRenderer()
+    protected function createRenderer()
     {
         if($this->sortable) {
             $drag = [
@@ -298,7 +303,8 @@ class TabularInput extends Widget
             'extraButtons'      => $this->extraButtons,
             'layoutConfig'      => $this->layoutConfig,
             'iconMap'           => $iconMap,
-            'theme'             => $this->theme
+            'theme'             => $this->theme,
+            'prepend'           => $this->prepend
         ];
 
         if ($this->removeButtonOptions !== null) {

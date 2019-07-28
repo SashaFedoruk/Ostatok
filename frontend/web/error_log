@@ -1,0 +1,1056 @@
+[19-Apr-2019 15:32:27 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49098',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555687947.7551701068878173828125,
+    'REQUEST_TIME' => 1555687947,
+]
+[19-Apr-2019 15:33:50 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49095',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688029.851151943206787109375,
+    'REQUEST_TIME' => 1555688029,
+]
+[19-Apr-2019 15:34:48 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49036',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688087.90443706512451171875,
+    'REQUEST_TIME' => 1555688087,
+]
+[19-Apr-2019 15:35:33 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49105',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688133.298654079437255859375,
+    'REQUEST_TIME' => 1555688133,
+]
+[19-Apr-2019 15:36:12 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1191. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49073',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688171.776360988616943359375,
+    'REQUEST_TIME' => 1555688171,
+]
+[19-Apr-2019 15:40:18 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1192. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1192. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49057',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688417.970880031585693359375,
+    'REQUEST_TIME' => 1555688417,
+]
+[19-Apr-2019 15:44:21 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1193. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1193. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49135',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688660.4810619354248046875,
+    'REQUEST_TIME' => 1555688660,
+]
+[19-Apr-2019 15:45:24 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1192. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1192. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49065',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555688723.0786540508270263671875,
+    'REQUEST_TIME' => 1555688723,
+]
+[19-Apr-2019 15:54:13 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1210. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1210. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49026',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689251.887465953826904296875,
+    'REQUEST_TIME' => 1555689251,
+]
+[19-Apr-2019 15:55:35 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49115',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689334.4774229526519775390625,
+    'REQUEST_TIME' => 1555689334,
+]
+[19-Apr-2019 15:56:00 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49141',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689359.65098094940185546875,
+    'REQUEST_TIME' => 1555689359,
+]
+[19-Apr-2019 15:56:15 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49048',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689372.952992916107177734375,
+    'REQUEST_TIME' => 1555689372,
+]
+[19-Apr-2019 15:56:50 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224; _gat_gtag_UA_137253090_1=1',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49067',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689410.09512805938720703125,
+    'REQUEST_TIME' => 1555689410,
+]
+[19-Apr-2019 15:58:18 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224; _gat_gtag_UA_137253090_1=1',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49137',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689495.50862407684326171875,
+    'REQUEST_TIME' => 1555689495,
+]
+[19-Apr-2019 15:58:30 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1214. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224; _gat_gtag_UA_137253090_1=1',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49079',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689506.8070700168609619140625,
+    'REQUEST_TIME' => 1555689506,
+]
+[19-Apr-2019 16:03:13 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224; _gat_gtag_UA_137253090_1=1',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49138',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689790.8554069995880126953125,
+    'REQUEST_TIME' => 1555689790,
+]
+[19-Apr-2019 16:03:42 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49111',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689819.1225750446319580078125,
+    'REQUEST_TIME' => 1555689819,
+]
+[19-Apr-2019 16:04:51 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49149',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555689888.1797029972076416015625,
+    'REQUEST_TIME' => 1555689888,
+]
+[19-Apr-2019 16:07:37 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49145',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555690055.8968570232391357421875,
+    'REQUEST_TIME' => 1555690055,
+]
+[19-Apr-2019 16:08:26 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224; _gat_gtag_UA_137253090_1=1',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49024',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555690105.4547979831695556640625,
+    'REQUEST_TIME' => 1555690105,
+]
+[19-Apr-2019 16:09:04 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1203. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49100',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555690137.53421306610107421875,
+    'REQUEST_TIME' => 1555690137,
+]
+[19-Apr-2019 16:14:56 UTC] An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1194. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /home/u105007216/domains/ostatok.online/public_html/frontend/controllers/SiteController.php on line 1194. in /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/u105007216/domains/ostatok.online/public_html/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'LSPHP_ProcessGroup' => 'on',
+    'PATH' => '/bin:/usr/bin:/usr/local/bin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_COOKIE' => '_ga=GA1.2.915655320.1554140979; _csrf-frontend=55bc0161491ab07940017f5d951d4d475317f624f5281f10498cd10f9ce2e379a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22klvBthTtxKfpFGRfePHxr32IQqcrAjCw%22%3B%7D; _gid=GA1.2.725623095.1555687224',
+    'HTTP_HOST' => 'ostatok.online',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'DOCUMENT_ROOT' => '/home/u105007216/domains/ostatok.online/public_html',
+    'REMOTE_ADDR' => '89.64.9.243',
+    'REMOTE_PORT' => '49123',
+    'SERVER_ADDR' => '185.224.138.220',
+    'SERVER_NAME' => 'ostatok.online',
+    'SERVER_ADMIN' => '',
+    'SERVER_PORT' => '80',
+    'REQUEST_URI' => '/frontend/web/index.php?r=site%2Fadd-db',
+    'SCRIPT_FILENAME' => '/home/u105007216/domains/ostatok.online/public_html/frontend/web/index.php',
+    'QUERY_STRING' => 'r=site%2Fadd-db',
+    'SCRIPT_URI' => 'http://ostatok.online/frontend/web/index.php',
+    'SCRIPT_URL' => '/frontend/web/index.php',
+    'SCRIPT_NAME' => '/frontend/web/index.php',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'SERVER_SOFTWARE' => 'LiteSpeed',
+    'REQUEST_METHOD' => 'GET',
+    'X-LSCACHE' => 'on',
+    'PHP_SELF' => '/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1555690495.73865604400634765625,
+    'REQUEST_TIME' => 1555690495,
+]
