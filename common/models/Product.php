@@ -150,5 +150,12 @@ class Product extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Decoration::className(), ['id' => 'decoration_id']);
     }
+    public function getHeight(){
+        foreach ($this->propertyProducts as $el){
+            if($el->prop->parent_id == 5){
+                return $el->prop->name;
+            }
+        }
+    }
 
 }

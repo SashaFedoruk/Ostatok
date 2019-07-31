@@ -17,6 +17,7 @@ use yii\db\ActiveRecord;
  * @property int $length
  * @property int $created_at
  * @property int $updated_at
+ * @property int $parsed_ads
  *
  * @property User $user
  * @property Product $product
@@ -40,7 +41,7 @@ class Ads extends \yii\db\ActiveRecord
     {
         return [
             [['user_id', 'product_id', 'status', 'price', 'width', 'length'], 'required', 'message' => 'Это поле обязательное.'],
-            [['user_id', 'product_id', 'status', 'width', 'length', 'created_at', 'updated_at'], 'integer'],
+            [['user_id', 'product_id', 'status', 'width', 'length', 'created_at', 'updated_at', 'parsed_ads'], 'integer'],
             [['price'], 'number'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::className(), 'targetAttribute' => ['product_id' => 'id']],

@@ -883,38 +883,93 @@ class SiteController extends Controller
        // $model = $model->all();
         $model=new XlUpload();
         $params=['model' => $model];
+        $counterTrue = 0;
+        $counterFalse = 0;
+        $prevTrueName = "";
+        $prevFalseName = "";
+        $counterNoneProducts = 0;
          if (Yii::$app->request->isPost) {
             $model->xlFile = UploadedFile::getInstance($model, 'xlFile');
             $newfile=$model->upload();
-            //var_dump($newfile);
             if ($newfile) {
                     $data = Excel::import($newfile, ['setIndexSheetByName' => false,
                         'setFirstRecordAsKeys' => false,
                         'getOnlySheet' => 1]);
-           // $data= array_values($data);
-                    foreach ($data as $data_item)
+                    foreach ($data as $el)
                     {
-                        $data_item= array_values($data_item);
+                        $row = array_values($el);
                         //var_dump($data_item);
-                        If(is_numeric($data_item[1]))
+                        if(is_numeric($row[1]))
                         {
-                            $ostatok_id=$data_item[1];
-                            $ostatok_name=$data_item[2];
-                            $ostatok_wl=$data_item[4];
-                            $ostatok_h=$data_item[5];
-                            
-                            if($ostatok_id&&$ostatok_name&&$ostatok_wl&&$ostatok_h)
-                            {
-                                echo  "$ostatok_id--$ostatok_name--$ostatok_wl--$ostatok_h<br>";
-                           }
+                            $id = $row[1];
+                            $name = $row[2];
+                            $sizes = $row[4];
+                            $height = floatval(preg_replace('/,/','.', $row[5]));
+                            $price = $row[7];
+
+                            if($id && $name && $sizes && $height) {
+                                $name = preg_replace('/(\(.+?\))|(NEW.*)|(\d+х\d+х\d+)|(группа .+,)|(,)|(мм)/', '', $name);
+                                if($prevTrueName == $name){
+                                    $counterTrue++;
+                                    continue;
+                                } else if($prevFalseName == $name){
+                                    $counterFalse++;
+                                    continue;
+                                }
+                                $tmp = 0;
+                                $posStart = 0;
+                                while ($tmp != 3) {
+                                    $posStart = strpos($name, " ", $posStart + 1);
+                                    $tmp++;
+                                }
+
+                                $posEnd = strpos($name, " ", $posStart + 1);
+                                $posEnd = strpos($name, " ", $posEnd + 1);
+                                $posEnd = strpos($name, " ", $posEnd + 1);
+                                if (!$posEnd) {
+                                    $posEnd = strlen($name);
+                                }
+
+                                $rezName = substr($name, $posStart, $posEnd - $posStart);
+
+                                $rezName = preg_replace('/(HPL)|(Фьюжн)|(одностороння лам.)|(SM Белый)|(\\.+)|(DuPont)|(Bark)|(Gleam)|(Monte Bianco)|(Tevere)|(Sorrento)|([^\x00-\x7F])/', '', $rezName);
+                                $rezName = preg_replace('/(-)|(\/$)/', '', $rezName);
+
+                                $product_id =  $this->getProductIdByNameAndHeight($rezName, $height);
+                                if($product_id != -1){
+                                    $counterTrue++;
+                                    $prevTrueName = $name;
+
+                                    //echo "T: $rezName <br>";
+                                } else {
+                                    $tmpNames = $name;
+                                    $tmpNames = preg_replace('/[\\\].*/', '', $tmpNames);
+                                    $product_id =  $this->getProductIdByNameAndHeight($tmpNames, $height);
+
+                                    if($product_id != -1){
+                                        $counterTrue++;
+                                        $prevTrueName = $name;
+                                        continue;
+                                    }
+
+                                    echo "F: $rezName  ($height)<br>";
+                                    $prevFalseName = $name;
+                                    $counterFalse++;
+                                    $counterNoneProducts++;
+                                }
+    
+                            }
                         }
                         else
                         {
                            // echo $data_item[1]."NAN<br>";
                         }
                     }
+                echo "True: $counterTrue, False: $counterFalse (None products: $counterNoneProducts)";
            // var_dump($data);
                     die();
+
+
                $params['result']="файл загружен";
                
             }
@@ -928,6 +983,21 @@ class SiteController extends Controller
                 $params['result']=NULL;
         }
         return $this->render('xl-upload', $params);
+    }
+    private function getProductIdByNameAndHeight($name, $height){
+        $param = trim($name);
+        $params = explode(' ', $param);
+        $products = Product::find()->where(['like', 'name', $params])->all();
+        foreach ($products as $el){
+            if($el->getHeight() == $height){
+                return $el->id;
+            }
+
+        }
+        return -1;
+    }
+    private function createParsedAds($product_id, $user_id, $sizes, $price){
+
     }
 
     public function getPrice($width, $length)
