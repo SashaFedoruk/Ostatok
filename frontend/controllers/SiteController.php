@@ -7,6 +7,7 @@ use backend\models\CreatePropertyCategoriesForm;
 use common\models\AdsStats;
 use common\models\City;
 use common\models\Decoration;
+use common\models\ImportResult;
 use common\models\Notifications;
 use common\models\Producent;
 use common\models\Product;
@@ -664,11 +665,20 @@ class SiteController extends Controller
         $sum = $model->sum('price');
         $count = $model->count();
 
-        $model = $model->all();
+
+        $countQuery = clone $model;
+        $pages = new Pagination(['totalCount' => $countQuery->count()]);
+        $pages->setPageSize(12);
+        $model = $model->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+
+
         return $this->render('all-active-ads', [
             'model' => $model,
             'sum' => $sum,
-            'count' => $count
+            'count' => $count,
+            'pages' => $pages
         ]);
     }
 
@@ -888,6 +898,8 @@ class SiteController extends Controller
         $prevTrueName = "";
         $prevFalseName = "";
         $counterNoneProducts = 0;
+        $products = null;
+        $userId = yii::$app->user->id;
          if (Yii::$app->request->isPost) {
             $model->xlFile = UploadedFile::getInstance($model, 'xlFile');
             $newfile=$model->upload();
@@ -895,22 +907,28 @@ class SiteController extends Controller
                     $data = Excel::import($newfile, ['setIndexSheetByName' => false,
                         'setFirstRecordAsKeys' => false,
                         'getOnlySheet' => 1]);
+                    $this->deleteAllParsedUserAds($userId);
                     foreach ($data as $el)
                     {
                         $row = array_values($el);
-                        //var_dump($data_item);
                         if(is_numeric($row[1]))
                         {
                             $id = $row[1];
                             $name = $row[2];
-                            $sizes = $row[4];
+                            $sizes = explode("х", $row[4]);
                             $height = floatval(preg_replace('/,/','.', $row[5]));
-                            $price = $row[7];
+                            $price = floatval(preg_replace('/,/','', $row[7]));
 
-                            if($id && $name && $sizes && $height) {
+                            if($id && $name && sizeof($sizes) == 2 && $height && $price) {
                                 $name = preg_replace('/(\(.+?\))|(NEW.*)|(\d+х\d+х\d+)|(группа .+,)|(,)|(мм)/', '', $name);
                                 if($prevTrueName == $name){
-                                    $counterTrue++;
+                                    $productId = $this->getProductIdFromFilteredByHeight($products, $height);
+                                    if($productId != -1){
+                                        $this->createParsedAds($productId, $userId, $sizes, $price);
+                                        $counterTrue++;
+                                    } else {
+                                        $counterFalse++;
+                                    }
                                     continue;
                                 } else if($prevFalseName == $name){
                                     $counterFalse++;
@@ -935,43 +953,43 @@ class SiteController extends Controller
                                 $rezName = preg_replace('/(HPL)|(Фьюжн)|(одностороння лам.)|(SM Белый)|(\\.+)|(DuPont)|(Bark)|(Gleam)|(Monte Bianco)|(Tevere)|(Sorrento)|([^\x00-\x7F])/', '', $rezName);
                                 $rezName = preg_replace('/(-)|(\/$)/', '', $rezName);
 
-                                $product_id =  $this->getProductIdByNameAndHeight($rezName, $height);
-                                if($product_id != -1){
+                                $products =  $this->getProductsByName($rezName);
+                                $productId = $this->getProductIdFromFilteredByHeight($products, $height);
+                                if($productId != -1){
                                     $counterTrue++;
                                     $prevTrueName = $name;
-
-                                    //echo "T: $rezName <br>";
+                                    $this->createParsedAds($productId, $userId, $sizes, $price);
                                 } else {
                                     $tmpNames = $name;
                                     $tmpNames = preg_replace('/[\\\].*/', '', $tmpNames);
-                                    $product_id =  $this->getProductIdByNameAndHeight($tmpNames, $height);
+                                    $products =  $this->getProductsByName($tmpNames);
+                                    $productId = $this->getProductIdFromFilteredByHeight($products, $height);
 
-                                    if($product_id != -1){
+                                    if($productId != -1){
                                         $counterTrue++;
                                         $prevTrueName = $name;
+                                        $this->createParsedAds($productId, $userId, $sizes, $price);
                                         continue;
                                     }
 
-                                    echo "F: $rezName  ($height)<br>";
+                                    //echo "F: $rezName  ($height)<br>";
                                     $prevFalseName = $name;
                                     $counterFalse++;
                                     $counterNoneProducts++;
                                 }
-    
+
                             }
                         }
-                        else
-                        {
-                           // echo $data_item[1]."NAN<br>";
-                        }
                     }
-                echo "True: $counterTrue, False: $counterFalse (None products: $counterNoneProducts)";
-           // var_dump($data);
-                    die();
+                //echo "True: $counterTrue, False: $counterFalse (None products: $counterNoneProducts)";
+                $importResult = new ImportResult();
+                $importResult->countAdded = $counterTrue;
+                $importResult->countFailed = $counterFalse;
+                $importResult->countProductSkipped = $counterNoneProducts;
 
-
-               $params['result']="файл загружен";
-               
+                return $this->render('import-result', [
+                    'model' => $importResult
+                ]);
             }
             else
             {
@@ -984,21 +1002,45 @@ class SiteController extends Controller
         }
         return $this->render('xl-upload', $params);
     }
-    private function getProductIdByNameAndHeight($name, $height){
-        $param = trim($name);
-        $params = explode(' ', $param);
-        $products = Product::find()->where(['like', 'name', $params])->all();
+    private function getProductIdFromFilteredByHeight($products, $height){
         foreach ($products as $el){
             if($el->getHeight() == $height){
                 return $el->id;
             }
-
         }
         return -1;
     }
-    private function createParsedAds($product_id, $user_id, $sizes, $price){
-
+    private function getProductsByName($name){
+        $param = trim($name);
+        $params = explode(' ', $param);
+        $products = Product::find()->where(['like', 'name', $params])->all();
+        return $products;
     }
+    private function createParsedAds($product_id, $user_id, $sizes, $price){
+        $ads = new Ads();
+        $ads->parsed_ads = 1;
+        $ads->product_id = $product_id;
+        $ads->user_id = $user_id;
+        $ads->width = (int)$sizes[0];
+        $ads->length = (int)$sizes[1];
+        $ads->price = $price;
+        $ads->status = 1;
+
+        if($ads->save()){
+            $tmp = new AdsStats();
+            $tmp->ads_id = $ads->getPrimaryKey();
+            $tmp->save();
+            return $this;
+        }
+    }
+    private function deleteAllParsedUserAds($user_id){
+        $ads = Ads::find()->where(['user_id' => $user_id])->andWhere(['parsed_ads' => 1])->all();
+        foreach ($ads as $el) {
+            AdsStats::deleteAll([ 'ads_id' => $el->id]);
+            $el->delete();
+        }
+    }
+
 
     public function getPrice($width, $length)
     {

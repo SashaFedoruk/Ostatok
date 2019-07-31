@@ -9,7 +9,7 @@ use yii\helpers\Url;
 /* @var $sum */
 /* @var $count */
 
-$this->title = 'Загрузка Excel';
+$this->title = 'Импорт данных';
 $this->params['breadcrumbs'][] = ['label' => 'Categories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
    
     <?= $form->field($model, 'xlFile')->fileInput() ?>
-    <button>Submit</button>
+    <?= Html::submitButton('Загрузить', ['class' => 'btn my2-btn']) ?>
 
 <?php ActiveForm::end() ?>
     <?php else: ?>

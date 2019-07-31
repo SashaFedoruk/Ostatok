@@ -3,11 +3,13 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Ads [] */
 /* @var $sum  */
 /* @var $count  */
+/* @var pages */
 
 
 $this->title = 'Все обьявления';
@@ -55,6 +57,26 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 <?php } ?>
 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <?= LinkPager::widget([
+                    'pagination' => $pages,
+                    'options' => ['class' => 'list-inline'],
+                    'linkOptions' => ['class' => 'page'],
+                    'prevPageLabel' => '<span><img src="img/Catalog/back.png" alt=""></a></span>',
+                    'prevPageCssClass' => 'without-border',
+                    'nextPageLabel' => '<span><img src="img/Catalog/next.png" alt=""></a</span>',
+                    'nextPageCssClass' => 'without-border',
+                    'lastPageLabel' => $pages->pageCount,
+                    'lastPageCssClass' => 'page',
+                    'firstPageCssClass' => 'page',
+                    'firstPageLabel' => "1",
+                    'activePageCssClass' => 'active',
+                    'maxButtonCount' => 7,    // Set maximum number of page buttons that can be displayed
+
+                ]); ?>
             </div>
         </div>
     </div>
