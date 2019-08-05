@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218ba55b-2e31-44eb-b9e9-023cf4b92cd3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/common/models/ImportResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/site/import-result.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/all-active-ads.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/all-active-ads.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/site/xl-upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/xl-upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/web/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +185,8 @@
       <workItem from="1557706066350" duration="680000" />
       <workItem from="1557770069297" duration="826000" />
       <workItem from="1564338240272" duration="466000" />
-      <workItem from="1564576253368" duration="14718000" />
+      <workItem from="1564576253368" duration="15298000" />
+      <workItem from="1565013973358" duration="2149000" />
     </task>
     <servers />
   </component>

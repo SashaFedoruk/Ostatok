@@ -883,8 +883,7 @@ class SiteController extends Controller
             'count' => $count
         ]);
     }
-    //Konstantin Chernyh Excel Upload
-       public function actionXlUpload()
+    public function actionXlUpload()
     {
         $this->layout = "admin-panel";
         //$model = Ads::find()->where(['status' => 0])->andWhere(['user_id' => YII::$app->user->id])->orderBy(['updated_at' => SORT_DESC]);
@@ -914,13 +913,13 @@ class SiteController extends Controller
                         if(is_numeric($row[1]))
                         {
                             $id = $row[1];
-                            $name = $row[2];
+                            $startName = $row[2];
                             $sizes = explode("х", $row[4]);
                             $height = floatval(preg_replace('/,/','.', $row[5]));
                             $price = floatval(preg_replace('/,/','', $row[7]));
 
-                            if($id && $name && sizeof($sizes) == 2 && $height && $price) {
-                                $name = preg_replace('/(\(.+?\))|(NEW.*)|(\d+х\d+х\d+)|(группа .+,)|(,)|(мм)/', '', $name);
+                            if($id && $startName && sizeof($sizes) == 2 && $height && $price) {
+                                $name = preg_replace('/(\(.+?\))|(NEW.*)|(\d+х\d+х\d+)|(группа .+,)|(,)|(мм)/', '', $startName);
                                 if($prevTrueName == $name){
                                     $productId = $this->getProductIdFromFilteredByHeight($products, $height);
                                     if($productId != -1){
@@ -953,29 +952,40 @@ class SiteController extends Controller
                                 $rezName = preg_replace('/(HPL)|(Фьюжн)|(одностороння лам.)|(SM Белый)|(\\.+)|(DuPont)|(Bark)|(Gleam)|(Monte Bianco)|(Tevere)|(Sorrento)|([^\x00-\x7F])/', '', $rezName);
                                 $rezName = preg_replace('/(-)|(\/$)/', '', $rezName);
 
-                                $products =  $this->getProductsByName($rezName);
+                                $products =  $this->getProductsByName($startName);
                                 $productId = $this->getProductIdFromFilteredByHeight($products, $height);
                                 if($productId != -1){
                                     $counterTrue++;
                                     $prevTrueName = $name;
                                     $this->createParsedAds($productId, $userId, $sizes, $price);
                                 } else {
-                                    $tmpNames = $name;
-                                    $tmpNames = preg_replace('/[\\\].*/', '', $tmpNames);
-                                    $products =  $this->getProductsByName($tmpNames);
+                                    $products = $this->getProductsByName($rezName);
                                     $productId = $this->getProductIdFromFilteredByHeight($products, $height);
-
-                                    if($productId != -1){
+                                    if ($productId != -1) {
                                         $counterTrue++;
                                         $prevTrueName = $name;
                                         $this->createParsedAds($productId, $userId, $sizes, $price);
-                                        continue;
-                                    }
+                                    } else {
+                                        $tmpNames = $name;
+                                        $tmpNames = preg_replace('/[\\\].*/', '', $tmpNames);
+                                        $products = $this->getProductsByName($tmpNames);
+                                        $productId = $this->getProductIdFromFilteredByHeight($products, $height);
 
-                                    //echo "F: $rezName  ($height)<br>";
-                                    $prevFalseName = $name;
-                                    $counterFalse++;
-                                    $counterNoneProducts++;
+                                        if ($productId != -1) {
+                                            $counterTrue++;
+                                            $prevTrueName = $name;
+                                            $this->createParsedAds($productId, $userId, $sizes, $price);
+                                            continue;
+                                        }
+
+
+                                        $prevFalseName = $name;
+                                        $counterFalse++;
+                                        $counterNoneProducts++;
+                                        $newProductId = $this->createOtherProduct($startName, $height);
+                                        $this->createParsedAds($newProductId, $userId, $sizes, $price);
+                                        echo $newProductId . " ";
+                                    }
                                 }
 
                             }
@@ -998,7 +1008,7 @@ class SiteController extends Controller
         }
         else
         {
-                $params['result']=NULL;
+                $params['result'] = NULL;
         }
         return $this->render('xl-upload', $params);
     }
@@ -1009,6 +1019,29 @@ class SiteController extends Controller
             }
         }
         return -1;
+    }
+    private function createOtherProduct($name, $height){
+        $product = new Product();
+        $product->name = $name;
+        $product->category_id = 27;
+        $product->producent_id = 46;
+        $product->decoration_id = 686;
+        $product->save();
+
+        $property = Property::find()->where(['name' => $height])->andWhere(['parent_id' => 5])->one();
+        if(!$property){
+            $property = new Property();
+            $property->parent_id = 5;
+            $property->name = $height;
+            $property->save();
+        }
+
+        $propProduct = new PropertyProduct();
+        $propProduct->product_id = $product->getPrimaryKey();
+        $propProduct->prop_id = $property->getPrimaryKey();
+        $propProduct->save();
+
+        return $product->getPrimaryKey();
     }
     private function getProductsByName($name){
         $param = trim($name);
