@@ -30,6 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= Html::submitButton('Загрузить', ['class' => 'btn my2-btn']) ?>
 
 <?php ActiveForm::end() ?>
+                    <br>
+                    <br>
+                <p>Шаблон для импорта данных: <?= Html::a('Скачать', ['/site/download-template'], ['class'=>'btn my2-btn']) ?></p>
     <?php else: ?>
     <?=$result?>
     <?php endif; ?>

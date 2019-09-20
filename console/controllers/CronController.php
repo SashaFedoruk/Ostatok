@@ -41,6 +41,9 @@ class CronController extends Controller {
             <br>
             <p>С уважением,<br> Служба поддержки http://ostatok.online</p>
             
+            <br>
+            <br>
+            <a href='http://ostatok.online/frontend/web/index.php?r=site%2Findex#for-whom'>Посоветуйте, как улучшить наш сервис</a>
             ";
 
             Yii::$app->mailer->compose()

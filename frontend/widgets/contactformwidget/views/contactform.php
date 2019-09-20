@@ -13,7 +13,7 @@ use yii\bootstrap\ActiveForm;
 <?php $form = ActiveForm::begin(['action' => ['site/contact-form'], 'enableClientValidation' => false, 'options' => ['class' => 'navbar-form']]); ?>
     <div class="row">
         <div class="col-lg-12">
-            <h4>Посоветуйте, как улучшить наш сервис?</h4>
+            <h4>Посоветуйте, как улучшить наш сервис</h4>
         </div>
     </div>
 <div class="row">

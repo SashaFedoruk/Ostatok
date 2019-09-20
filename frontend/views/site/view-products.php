@@ -7,14 +7,15 @@ use yii\widgets\LinkPager;
 /* @var $model common\models\Product [] */
 /* @var pages */
 
+$categoryName = isset($model[0]) ? $model[0]->category->name : "Неизвестная";
 
-$this->title = 'Товары '.$model[0]->category->name;
+$this->title = 'Товары '.$categoryName;
 $this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['site/catalog']];
 if(Yii::$app->getRequest()->getQueryParam('producentId')){
-    $this->params['breadcrumbs'][] = ['label' => $model[0]->category->name, 'url' => ['site/view-products', 'categoryId' =>  $model[0]->category->id]];
+    $this->params['breadcrumbs'][] = ['label' => $categoryName, 'url' => ['site/view-products', 'categoryId' =>  $model[0]->category->id]];
     $this->params['breadcrumbs'][] = $model[0]->producent->name;
 } else {
-    $this->params['breadcrumbs'][] = $model[0]->category->name;
+    $this->params['breadcrumbs'][] = $categoryName;
 }
 
 ?>
@@ -85,22 +86,25 @@ if(Yii::$app->getRequest()->getQueryParam('producentId')){
 
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-            <?= LinkPager::widget([
-                'pagination' => $pages,
-                'options' => ['class' => 'list-inline'],
-                'linkOptions' => ['class' => 'page'],
-                'prevPageLabel' => '<span><img src="img/Catalog/back.png" alt=""></a></span>',
-                'prevPageCssClass' => 'without-border',
-                'nextPageLabel' => '<span><img src="img/Catalog/next.png" alt=""></a</span>',
-                'nextPageCssClass' => 'without-border',
-                'lastPageLabel' => $pages->pageCount,
-                'lastPageCssClass' => 'page',
-                'firstPageCssClass' => 'page',
-                'firstPageLabel' => "1",
-                'activePageCssClass' => 'active',
-                'maxButtonCount' => 7,    // Set maximum number of page buttons that can be displayed
+            <?php
+            if(count($model) > 0){
+                echo LinkPager::widget([
+                    'pagination' => $pages,
+                    'options' => ['class' => 'list-inline'],
+                    'linkOptions' => ['class' => 'page'],
+                    'prevPageLabel' => '<span><img src="img/Catalog/back.png" alt=""></a></span>',
+                    'prevPageCssClass' => 'without-border',
+                    'nextPageLabel' => '<span><img src="img/Catalog/next.png" alt=""></a</span>',
+                    'nextPageCssClass' => 'without-border',
+                    'lastPageLabel' => $pages->pageCount,
+                    'lastPageCssClass' => 'page',
+                    'firstPageCssClass' => 'page',
+                    'firstPageLabel' => "1",
+                    'activePageCssClass' => 'active',
+                    'maxButtonCount' => 7,    // Set maximum number of page buttons that can be displayed
 
-            ]); ?>
+                ]); 
+            }?>
         </div>
     </div>
 

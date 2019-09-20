@@ -37,6 +37,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'password')->passwordInput() ?>
 
+                <?= $form->field($model, 'agreed_rules')->checkbox() ?>
+<!--
+                <div class="form-group">
+                    <div class="checkbox">
+                      <label><input class="form-control" type="checkbox" value="">Даю согласие на обработку моих данных и получение предложений.</label>
+                    </div>
+                </div>
+-->
 
                 <div class="form-group">
                     <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>

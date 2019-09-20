@@ -67,8 +67,13 @@ $cities = \yii\helpers\ArrayHelper::map(\common\models\City::find()->orderBy('na
                 ->input('password', ['placeholder' => 'Пароль', 'autofocus' => 'autofocus'])
                 ->label(false); ?>
 
-            <?= $form->field($signUpModel, 'visible_email')->hiddenInput()->label(false) ?>
-
+             <div class="form-group required">
+                    <div class="checkbox">
+                      <label><input class="form-control" type="checkbox" value="" required>Даю согласие на обработку моих данных и получение предложений.</label>
+                    </div>
+                </div>
+                
+               
 
                 <?= Html::submitButton('Создать аккаунт', ['class' => 'btn my2-btn', 'name' => 'signup-button']) ?>
 

@@ -119,17 +119,18 @@ if($model->imgUrl != null && $model->imgUrl != ""){
             <div class="col-lg-12 col-md-12">
                 <div class="row">
 
-                    <div class="col-lg-3  col-sm-3">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for="">Ширина, от</label></div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= $form->field($filterModel, 'minSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'От'])->label(false); ?>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="col-lg-3  col-sm-3">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for="">Длина, от</label></div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= $form->field($filterModel, 'maxSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'От'])->label(false); ?></div>
+                        </div>
+                    </div>
+                     <div class="col-lg-3  col-sm-3">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label for="">Ширина, от</label></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?= $form->field($filterModel, 'minSize')->textInput(['pattern' => '[0-9]+(\.[0-9]{0,2})?%?', 'placeholder' => 'От'])->label(false); ?>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3  col-sm-3">

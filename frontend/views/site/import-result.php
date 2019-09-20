@@ -23,10 +23,7 @@ $this->params['breadcrumbs'][] = 'Update';
                             Количество успешно добавленых обьявлений: <b><?= $model->countAdded ?></b>
                         </div>
                         <div class="col-lg-12 col-md-12 col-md-12 col-sm-12 col-xs-12">
-                            Количество не добавленых обьявлений: <b><?= $model->countFailed ?></b>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-md-12 col-sm-12 col-xs-12">
-                            Количество не найденых продуктов: <b><?= $model->countProductSkipped ?></b>
+                            Количество добавленных товаров: <b><?= $model->counterAddedNewProducts ?></b>
                         </div>
                     </div>
                 </div>

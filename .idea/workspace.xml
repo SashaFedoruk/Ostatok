@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218ba55b-2e31-44eb-b9e9-023cf4b92cd3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/upload/importExample.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/ImportResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/ImportResult.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/site/import-result.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/import-result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/site/xl-upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/site/xl-upload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,19 +121,19 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\widgets\searchwidget\views" />
-      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\widgets\searchwidget" />
-      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\views" />
-      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\models" />
-      <recent name="E:\OSPanel\domains\dashboard.loc\common\models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\OSPanel\domains\dashboard.loc\frontend\web\css" />
       <recent name="E:\OSPanel\domains\dashboard.loc\frontend\views\site" />
       <recent name="E:\OSPanel\domains\dashboard.loc\frontend\web" />
       <recent name="E:\OSPanel\domains\dashboard.loc\backend\web\css" />
       <recent name="E:\OSPanel\domains\dashboard.loc\backend\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/upload" />
+      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\widgets\searchwidget\views" />
+      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\widgets\searchwidget" />
+      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\views" />
+      <recent name="E:\OSPanel\domains\dashboard.loc\frontend\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,7 +190,8 @@
       <workItem from="1557770069297" duration="826000" />
       <workItem from="1564338240272" duration="466000" />
       <workItem from="1564576253368" duration="15298000" />
-      <workItem from="1565013973358" duration="2149000" />
+      <workItem from="1565013973358" duration="6606000" />
+      <workItem from="1565025445192" duration="1696000" />
     </task>
     <servers />
   </component>

@@ -9,8 +9,7 @@ use yii\base\Model;
 class ImportResult extends Model
 {
     public $countAdded;
-    public $countFailed;
-    public $countProductSkipped;
+    public $counterAddedNewProducts;
 }
 
 

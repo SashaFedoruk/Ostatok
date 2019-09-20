@@ -17,6 +17,7 @@ class SignupForm extends Model
     public $lastname;
     public $phone = '';
     public $visible_email = 1;
+    public $agreed_rules = 0;
 
 
     /**
@@ -46,7 +47,8 @@ class SignupForm extends Model
             [['firstname', 'lastname', 'phone'], 'string', 'max' => 32],
             [['city_id', 'visible_email'], 'integer'],
 
-            [['firstname', 'lastname','city_id', 'visible_email'], 'required', 'message' => 'Обязательное поле.'],
+            [['firstname', 'lastname','city_id', 'visible_email', 'agreed_rules'], 'required', 'message' => 'Обязательное поле.'],
+            
 
 
 

@@ -76,7 +76,7 @@ class SiteController extends Controller
                             'get-properties-for-category', 'add-product', 'create-producent', 'delete-producent',
                             'get-fields-for-category', 'products', 'delete-product', 'view-product', 'update-product',
                             'create-ads', 'get-producents-by-category-id', 'products-by-category-id-and-producent-id', 'decorations-by-category-id-and-producent-id', 'heights-by-category-id-and-producent-id',
-                            'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'search', 'copy-ads', 'create-ads-by-product-id', 'add-notification', 'all-active-ads','xl-upload'],
+                            'all-archive-ads', 'delete-ads', 'update-ads', 'publish-ads', 'search', 'copy-ads', 'create-ads-by-product-id', 'add-notification', 'all-active-ads','xl-upload', 'download-template'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -206,14 +206,12 @@ class SiteController extends Controller
             $name = Yii::$app->request->get('ProductSearch')['name'];
             $params = explode('\s*', $name);
             $products = Product::find()->where(['like', 'name', $params]);
-
             $countQuery = clone $products;
             $pages = new Pagination(['totalCount' => $countQuery->count()]);
             $pages->setPageSize(12);
             $products = $products->offset($pages->offset)
                 ->limit($pages->limit)
                 ->all();
-
             return $this->render('view-products', [
                 'model' => $products,
                 'pages' => $pages
@@ -292,6 +290,9 @@ class SiteController extends Controller
             ->limit($pages->limit)
             ->all();
 
+        if(count($products) == 0){
+            return $this->actionCatalog();
+        }
         return $this->render('view-products', [
             'model' => $products,
             'pages' => $pages
@@ -883,6 +884,12 @@ class SiteController extends Controller
             'count' => $count
         ]);
     }
+    public function actionDownloadTemplate(){
+        $path = Yii::getAlias('@app') . '/upload/importExample.xls';
+
+
+        return \Yii::$app->response->sendFile($path);
+    }
     public function actionXlUpload()
     {
         $this->layout = "admin-panel";
@@ -893,10 +900,8 @@ class SiteController extends Controller
         $model=new XlUpload();
         $params=['model' => $model];
         $counterTrue = 0;
-        $counterFalse = 0;
+        $counterAddedNewProducts = 0;
         $prevTrueName = "";
-        $prevFalseName = "";
-        $counterNoneProducts = 0;
         $products = null;
         $userId = yii::$app->user->id;
          if (Yii::$app->request->isPost) {
@@ -912,90 +917,63 @@ class SiteController extends Controller
                         $row = array_values($el);
                         if(is_numeric($row[1]))
                         {
-                            $id = $row[1];
+
                             $startName = $row[2];
                             $sizes = explode("х", $row[4]);
                             $height = floatval(preg_replace('/,/','.', $row[5]));
                             $price = floatval(preg_replace('/,/','', $row[7]));
+                            $flag = true;
 
-                            if($id && $startName && sizeof($sizes) == 2 && $height && $price) {
+                            if($startName && sizeof($sizes) == 2 && $height && $price){
                                 $name = preg_replace('/(\(.+?\))|(NEW.*)|(\d+х\d+х\d+)|(группа .+,)|(,)|(мм)/', '', $startName);
-                                if($prevTrueName == $name){
+                                if($prevTrueName == $name) {
                                     $productId = $this->getProductIdFromFilteredByHeight($products, $height);
                                     if($productId != -1){
                                         $this->createParsedAds($productId, $userId, $sizes, $price);
-                                        $counterTrue++;
                                     } else {
-                                        $counterFalse++;
+                                        $newProductId = $this->createOtherProduct($name, $height);
+                                        $this->createParsedAds($newProductId, $userId, $sizes, $price);
+                                        $products = [
+                                            Product::findOne(['id' => $newProductId])
+                                        ];
+                                        $counterAddedNewProducts++;
                                     }
-                                    continue;
-                                } else if($prevFalseName == $name){
-                                    $counterFalse++;
+                                    $counterTrue++;
                                     continue;
                                 }
-                                $tmp = 0;
-                                $posStart = 0;
-                                while ($tmp != 3) {
-                                    $posStart = strpos($name, " ", $posStart + 1);
-                                    $tmp++;
+
+                                $names = $this->prepareNamesToFewFormats($startName);
+                                foreach($names as $curName){
+                                    $products =  $this->getProductsByName($curName);
+                                    $productId = $this->getProductIdFromFilteredByHeight($products, $height);
+                                    if($productId == -1){
+                                        continue;
+                                    }
+                                    $this->createParsedAds($productId, $userId, $sizes, $price);
+                                    $prevTrueName = $name;
+                                    $flag = false;
+                                    $counterTrue++;
+                                    break;
                                 }
-
-                                $posEnd = strpos($name, " ", $posStart + 1);
-                                $posEnd = strpos($name, " ", $posEnd + 1);
-                                $posEnd = strpos($name, " ", $posEnd + 1);
-                                if (!$posEnd) {
-                                    $posEnd = strlen($name);
-                                }
-
-                                $rezName = substr($name, $posStart, $posEnd - $posStart);
-
-                                $rezName = preg_replace('/(HPL)|(Фьюжн)|(одностороння лам.)|(SM Белый)|(\\.+)|(DuPont)|(Bark)|(Gleam)|(Monte Bianco)|(Tevere)|(Sorrento)|([^\x00-\x7F])/', '', $rezName);
-                                $rezName = preg_replace('/(-)|(\/$)/', '', $rezName);
-
-                                $products =  $this->getProductsByName($startName);
-                                $productId = $this->getProductIdFromFilteredByHeight($products, $height);
-                                if($productId != -1){
+                                if($flag){
+                                    $newProductId = $this->createOtherProduct($name, $height);
+                                    $this->createParsedAds($newProductId, $userId, $sizes, $price);
+                                    $products = [
+                                        Product::findOne(['id' => $newProductId])
+                                    ];
                                     $counterTrue++;
                                     $prevTrueName = $name;
-                                    $this->createParsedAds($productId, $userId, $sizes, $price);
-                                } else {
-                                    $products = $this->getProductsByName($rezName);
-                                    $productId = $this->getProductIdFromFilteredByHeight($products, $height);
-                                    if ($productId != -1) {
-                                        $counterTrue++;
-                                        $prevTrueName = $name;
-                                        $this->createParsedAds($productId, $userId, $sizes, $price);
-                                    } else {
-                                        $tmpNames = $name;
-                                        $tmpNames = preg_replace('/[\\\].*/', '', $tmpNames);
-                                        $products = $this->getProductsByName($tmpNames);
-                                        $productId = $this->getProductIdFromFilteredByHeight($products, $height);
-
-                                        if ($productId != -1) {
-                                            $counterTrue++;
-                                            $prevTrueName = $name;
-                                            $this->createParsedAds($productId, $userId, $sizes, $price);
-                                            continue;
-                                        }
-
-
-                                        $prevFalseName = $name;
-                                        $counterFalse++;
-                                        $counterNoneProducts++;
-                                        $newProductId = $this->createOtherProduct($startName, $height);
-                                        $this->createParsedAds($newProductId, $userId, $sizes, $price);
-                                        echo $newProductId . " ";
-                                    }
+                                    $counterAddedNewProducts++;
                                 }
-
                             }
                         }
                     }
                 //echo "True: $counterTrue, False: $counterFalse (None products: $counterNoneProducts)";
                 $importResult = new ImportResult();
                 $importResult->countAdded = $counterTrue;
-                $importResult->countFailed = $counterFalse;
-                $importResult->countProductSkipped = $counterNoneProducts;
+                $importResult->counterAddedNewProducts = $counterAddedNewProducts;
+
+                $this->clearEmptyOtherProducts();
 
                 return $this->render('import-result', [
                     'model' => $importResult
@@ -1011,6 +989,50 @@ class SiteController extends Controller
                 $params['result'] = NULL;
         }
         return $this->render('xl-upload', $params);
+    }
+    private function clearEmptyOtherProducts(){
+        $products = Product::find()->joinWith(['ads'])->groupBy(['product.id'])->where(['product.category_id' => 27])->having(['=', 'count(ads.id)', 0])->all();
+        foreach ($products as $product){
+            foreach ($product->propertyProducts as $el) {
+                $el->delete();
+            }
+            foreach ($product->ads as $el) {
+                $el->delete();
+            }
+
+            $product->delete();
+        }
+    }
+    private function prepareNamesToFewFormats($name){
+        $names = [$name];
+        $name = preg_replace('/(\(.+?\))|(NEW.*)|(\d+х\d+х\d+)|(группа .+,)|(,)|(мм)/', '', $name);
+        array_push($names, $name);
+
+        $tmpNames = $name;
+        $tmpNames = preg_replace('/[\\\].*/', '', $tmpNames);
+        array_push($names, $tmpNames);
+
+        $tmp = 0;
+        $posStart = 0;
+        while ($tmp != 3) {
+            $posStart = strpos($name, " ", $posStart + 1);
+            $tmp++;
+        }
+
+        $posEnd = strpos($name, " ", $posStart + 1);
+        $posEnd = strpos($name, " ", $posEnd + 1);
+        $posEnd = strpos($name, " ", $posEnd + 1);
+        if (!$posEnd) {
+            $posEnd = strlen($name);
+        }
+
+        $rezName = substr($name, $posStart, $posEnd - $posStart);
+
+        $rezName = preg_replace('/(HPL)|(Фьюжн)|(одностороння лам.)|(SM Белый)|(\\.+)|(DuPont)|(Bark)|(Gleam)|(Monte Bianco)|(Tevere)|(Sorrento)|([^\x00-\x7F])/', '', $rezName);
+        $rezName = preg_replace('/(-)|(\/$)/', '', $rezName);
+        array_push($names, $rezName);
+        return $names;
+
     }
     private function getProductIdFromFilteredByHeight($products, $height){
         foreach ($products as $el){
